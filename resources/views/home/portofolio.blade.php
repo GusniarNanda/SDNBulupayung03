@@ -15,79 +15,60 @@
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <title>Company</title>
+    <title>Galeri</title>
 </head>
 
 <body>
     <!-- NAVBAR -->
-    <nav
-    class="navbar navbar-expand-lg navbar-light bg-white shadow shadow-sm fixed-top py-3"
-  >
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#"
-        ><span class="primary">COMP</span>PANY</a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarNav"
-        aria-controls="navbarNav"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <a class="nav-link fw-bolder" href="#">Home</a>
-          </li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow shadow-sm fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#"><span class="primary">SDN 3 </span>BULUPAYUNG </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="/">Home</a>
+                    </li>
 
-          <li class="nav-item dropdown">
-            <a
-              class="nav-link fw-bolder dropdown-toggle active"
-              href="#"
-              id="navbarDropDdownMenuLink"
-              role="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              About
-            </a>
-            <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="about">About Us</a></li>
-              <li><a class="dropdown-item" href="team">Team</a></li>
-              <li>
-                <a class="dropdown-item" href="testimonial."
-                  >Testimonial</a
-                >
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bolder" href="service">Service</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bolder" href="portofolio">Portoflio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link fw-bolder" href="kontak">Kontak</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link fw-bolder dropdown-toggle" href="#" id="navbarDropDdownMenuLink"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            About
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="about">About Us</a></li>
+                            <li><a class="dropdown-item" href="team">Team</a></li>
+                            <li>
+                                <a class="dropdown-item" href="testimonial">Testimonial</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="services">Service</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder active" href="portofolio">Galeri</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="contact">Kontak</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!-- END NAVBAR -->
     <!-- breadcumbs -->
 
     <div class="breadcumbs py-2">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center text-white">
-                <h2>Portofolio</h2>
+                <h2>Galeri</h2>
                 <ol class="d-flex list-unstyled">
                     <li>Home</li>
-                    <li>Portofolio</li>
+                    <li>Galeri</li>
                 </ol>
             </div>
         </div>
@@ -98,12 +79,12 @@
     <div class="teams bg-light py-5">
         <div class="container">
             <div class="title-container">
-                <h2 class="text-center fw-bold">Portofolio</h2>
+                <h2 class="text-center fw-bold">Galeri Sekolah</h2>
                 <p class="text-center mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Ametaspernatur esse, ipsam sint similique molestias quaerat deleniti
-                    quia omnis! Quibusdam iusto dicta veritatis rerum nobis
-                    istevoluptate pariatur doloremque atque.
+                    Selamat datang di galeri sekolah kami! Di sini, Anda dapat menemukan momen-momen berharga yang
+                    diabadikan selama tahun ajaran, mulai dari kegiatan belajar mengajar hingga acara spesial. Setiap
+                    foto merefleksikan semangat dan kebersamaan di lingkungan sekolah kami. Mari kita lihat kenangan tak
+                    terlupakan ini bersama!
                 </p>
                 <div class="row mt-4">
                     <div class="col-md-12 d-flex justify-content-center">

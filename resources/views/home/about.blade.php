@@ -15,14 +15,14 @@
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <title>Company</title>
+    <title>Visi Misi</title>
 </head>
 
 <body>
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow shadow-sm fixed-top py-3">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><span class="primary">COMP</span>PANY</a>
+            <a class="navbar-brand fw-bold" href="/about"><span class="primary">SDN 3</span> BULUPAYUNG</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,30 +30,30 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="#">Home</a>
+                        <a class="nav-link fw-bolder" href="/">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link fw-bolder dropdown-toggle active" href="#" id="navbarDropDdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About
+                            Visi Misi
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about">About Us</a></li>
-                            <li><a class="dropdown-item" href="team">Team</a></li>
+                            <li><a class="dropdown-item active" href="about">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="team">Guru</a></li>
                             <li>
-                                <a class="dropdown-item" href="testimonial.">Testimonial</a>
+                                <a class="dropdown-item" href="testimonial">Sarpras</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="service">Service</a>
+                        <a class="nav-link fw-bolder" href="services">Service</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bolder" href="portofolio">Portoflio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="kontak">Kontak</a>
+                        <a class="nav-link fw-bolder" href="contact">Kontak</a>
                     </li>
                 </ul>
             </div>
@@ -79,40 +79,39 @@
     <div class="row mt-5">
         <div class="col-md-6" data-aos="fade-right">
             <h3 class="fw-bold about-us-title">
-                Lorem ipsum dolor sit amet consectetur
+                VISI
             </h3>
             <p class="fw-bolder mt-4 about-us-subtitle">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam
-                nobis illo elligendi sint commodi
+                Terwujudnya siswa berbudi pekerti luhur, cerdas, berbudaya, terampil berkarya, dan berkarakter Pancasila
             </p>
         </div>
         <div class="col-md-6" data-aos="fade-left">
+            <h3 class="fw-bold about-us-title">
+                MISI
+            </h3>
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deserunt,
-                minima non. Aliquid itaque quas libero totam consecquatur corporis
-                quibusdam repellendus earum id atque cum veniam, delectus eum odio?
-                Animi, voluptatum!
+                SDN 3 Bulupayung berkomitmen untuk membentuk siswa yang berkarakter, cerdas, dan siap menghadapi
+                tantangan masa depan. Melalui pendekatan pendidikan yang holistik, kami berusaha mengembangkan potensi
+                siswa secara akademik, emosional, dan sosial. Untuk mencapai tujuan tersebut, kami menjalankan misi
+                sebagai berikut:
             </p>
             <ul class="list-group list-group-flush">
                 <li class="list-group-item">
                     <i class="fa fa-check-double primary"></i>
-                    lorem ipsum dolor sit amet, consectetur adipisicing elit, Omnis,
-                    laboriosam?
+                    1. Mendidik siswa agar beriman dan bertakwa kepada Tuhan Yang Maha Esa.
                 </li>
                 <li class="list-group-item">
                     <i class="fa fa-check-double primary"></i>
-                    lorem ipsum dolor sit amet, consectetur adipisicing elit, Omnis,
-                    laboriosam?
+                    2. Menciptakan lingkungan belajar yang kondusif dan menyenangkan.
                 </li>
                 <li class="list-group-item">
                     <i class="fa fa-check-double primary"></i>
-                    lorem ipsum dolor sit amet, consectetur adipisicing elit, Omnis,
-                    laboriosam?
+                    3. Menumbuhkan rasa cinta nasionalisme yang kuat.
                 </li>
                 <li class="list-group-item">
                     <i class="fa fa-check-double primary"></i>
-                    lorem ipsum dolor sit amet, consectetur adipisicing elit, Omnis,
-                    laboriosam?
+                    4. Mengembangkan potensi siswa dalam berbagai bidang, baik akademik maupun non-akademik,
+                    agar mampu bersaing di era globalisasi.
                 </li>
             </ul>
             <p class="mt-2">
@@ -125,95 +124,9 @@
     </div>
     <!-- end about -->
 
-    <!-- teams -->
-    <div class="teams bg-light mt-5 py-5">
-        <div class="container">
-            <div class="title-container">
-                <h2 class="text-center fw-bold">OUR TEAM</h2>
-                <p class="text-center mt-4">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
-                    aspernatur esse, ipsam sint similique molestias quaerat deleniti
-                    quia omnis! Quibusdam iusto dicta veritatis rerum nobis iste
-                    voluptate pariatur doloremque atque.
-                </p>
-                <div class="row">
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t1.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Chief Executive Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t2.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Chief Executive Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t3.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Chief Executive Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t4.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Chief Executive Officer</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end teams -->
 
-    <!-- INI CLIENT ASLI -->
-    <div class="clients mt-5">
-        <div class="container">
-            <div class="title-container">
-                <h2 class="text-center fw-bold">CLIENT</h2>
-            </div>
-            <div class="row mt-5">
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b1.svg" class="img-fluid brand-image" alt="" />
-                </div>
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b2.svg" class="img-fluid brand-image" alt="" />
-                </div>
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b3.svg" class="img-fluid brand-image" alt="" />
-                </div>
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b4.svg" class="img-fluid brand-image" alt="" />
-                </div>
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b5.svg" class="img-fluid brand-image" alt="" />
-                </div>
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b6.svg" class="img-fluid brand-image" alt="" />
-                </div>
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b7.svg" class="img-fluid brand-image" alt="" />
-                </div>
-                <div class="col-md-3 pt-5 text-center" data-aos="zoom-in">
-                    <img src="/assets/img/b8.svg" class="img-fluid brand-image" alt="" />
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- INI END CLIENT -->
+
+
 
     <!-- FOOTER -->
     <footer class="mt-5">

@@ -31,7 +31,7 @@ class HomeController extends Controller
         return view('home.contact');
     }
 
-    public function testimonials()
+    public function testimonial()
     {
         return view('home.testimonials');
     }
