@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClientController;
@@ -32,15 +33,18 @@ Route::get('/logout', [AuthController::class, 'logout']);
 
 Route::as('admin.')->prefix('admin')->group(function () {
     //Dashboard
-    Route::get('/dashboard', [DashboardController::class, 'index'])-> middleware('auth');
+    Route::get('/dashboard', [DashboardController::class, 'index']);
 
-    Route::resource('sliders', SliderController::class)->middleware('auth');
-    Route::resource('services', ServiceController::class)->middleware('auth');
-    Route::resource('testimonial',TestimonialController::class)->middleware('auth');
-    Route::resource('portofolio',PortofolioController::class)->middleware('auth');
-    Route::resource('clients',ClientController::class)->middleware('auth');
-    Route::resource('teams',TeamController::class)->middleware('auth');
+    Route::resource('sliders', SliderController::class);
+    Route::resource('services', ServiceController::class);
+    Route::resource('testimonial',TestimonialController::class);
+    Route::resource('portofolio',PortofolioController::class);
+    Route::resource('clients',ClientController::class);
+    Route::resource('teams',TeamController::class);
 
-    Route::get('/contact', [ContactController::class, 'index'])->middleware('auth');
-    Route::put('/contact/{id}', [ContactController::class, 'update'])->middleware('auth'); 
+    Route::get('contact', [ContactController::class, 'index']);
+    Route::put('contact/{id}', [ContactController::class, 'update']); 
+
+    Route::get('about', [AboutController::class, 'index']);
+    Route::put('about/{id}', [AboutController::class, 'update']); 
 });
