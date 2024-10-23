@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container">
-        <a href="/testimonial/create" class="btn btn-primary mb-3">Tambah Data</a>
+        <a href="/admin/testimonial/create" class="btn btn-primary mb-3">Tambah Data</a>
 
 
         @if ($message = Session::get('message'))
@@ -42,8 +42,8 @@
                             <img src="/image/{{ $testimonial->image }}" alt="" class="img-fluid" width="90">
                         </td>
                         <td>
-                            <a href="{{ route('testimonial.edit', $testimonial->id) }}" class="btn btn-warning">Edit</a>
-                            <form action="{{ route('testimonial.destroy', $testimonial->id) }}" method="POST">
+                            <a href="{{ route('admin.testimonial.edit', $testimonial->id) }}" class="btn btn-warning">Edit</a>
+                            <form action="{{ route('admin.testimonial.destroy', $testimonial->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Hapus</button>

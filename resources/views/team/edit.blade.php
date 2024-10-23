@@ -5,10 +5,10 @@
 @section('content')
 
     <div class="container">
-        <a href="/teams" class="btn btn-primary mb-3">Kembali</a>
+        <a href="/admin/teams" class="btn btn-primary mb-3">Kembali</a>
         <div class="row">
             <div class="col-md-12">
-                <form action="{{ route('teams.update', $team->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.teams.update', $team->id) }}" method="POST" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     <div class="form-group">

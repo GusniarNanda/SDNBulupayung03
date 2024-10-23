@@ -5,10 +5,10 @@
 @section('content')
 
     <div class="container">
-        <a href="/testimonial" class="btn btn-primary mb-3">Kembali</a>
+        <a href="/admin/testimonial" class="btn btn-primary mb-3">Kembali</a>
         <div class="row">
             <div class="col-md-12">
-                <form action="{{ route('testimonial.update', $testimonial->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.testimonial.update', $testimonial->id) }}" method="POST" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     <div class="form-group">

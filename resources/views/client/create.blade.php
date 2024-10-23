@@ -8,7 +8,7 @@
         <a href="/clients" class="btn btn-primary mb-3">Kembali</a>
         <div class="row">
             <div class="col-md-12">
-                <form action="{{ route('clients.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.clients.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="form-group">
                         <label for="">Judul</label>

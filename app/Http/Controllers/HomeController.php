@@ -3,12 +3,16 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Team;
+use App\Models\Slider;
 
 class HomeController extends Controller
 {
+    
     public function index()
     {
-        return view('home.index');
+        $sliders = Slider::all();
+        return view('home.index', compact('sliders'));
     }
     
     public function about()
@@ -18,7 +22,8 @@ class HomeController extends Controller
 
     public function team()
     {
-        return view('home.team');
+        $teams = Team::all();
+        return view('home.team', compact('teams'));
     }
 
     public function portofolio()

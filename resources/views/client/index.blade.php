@@ -5,7 +5,7 @@
 @section('content')
 
     <div class="container">
-        <a href="/clients/create" class="btn btn-primary mb-3">Tambah Data</a>
+        <a href="/admin/clients/create" class="btn btn-primary mb-3">Tambah Data</a>
 
 
         @if ($message = Session::get('message'))
@@ -42,8 +42,8 @@
                             <img src="/image/{{ $client->image }}" alt="" class="img-fluid" width="90">
                         </td>
                         <td>
-                            <a href="{{ route('clients.edit', $client->id) }}" class="btn btn-warning">Edit</a>
-                            <form action="{{ route('clients.destroy', $client->id) }}" method="POST">
+                            <a href="{{ route('admin.clients.edit', $client->id) }}" class="btn btn-warning">Edit</a>
+                            <form action="{{ route('admin.clients.destroy', $client->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
                                 <button type="submit" class="btn btn-danger">Hapus</button>

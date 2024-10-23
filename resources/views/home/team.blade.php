@@ -87,43 +87,20 @@
                     mencapai potensi maksimal mereka
                 </p>
                 <div class="row">
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t1.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Kepala Sekolah</p>
+                    @foreach ($teams as $index => $team)
+                        <div class="col-md-4 mb-4" data-aos="fade-up">
+                            <div class="card" style="width: 100%;">
+                                <img src="{{ Storage::url('images/' . $team->image) }}" class="card-img-top"
+                                    alt="{{ $team->title }}" style="max-width: 100%; height: auto;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title font-bold">{{ $team->title }}</h5>
+                                    <p class="card-text-muted">Kepala Sekolah</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t2.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Guru 1</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t3.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Guru 2</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3" data-aos="fade-up">
-                        <div class="card" style="width: 18rem">
-                            <img src="/assets/img/t4.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body text-center">
-                                <h5 class="card-title font-bold">John Doe</h5>
-                                <p class="card-text-muted">Guru 3</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
+
             </div>
         </div>
     </div>
