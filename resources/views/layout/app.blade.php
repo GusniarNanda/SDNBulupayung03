@@ -94,7 +94,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                     <a href="/admin/services" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Services</p>
+                                        <p>Data Prestasi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -106,7 +106,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                     <a href="/admin/portofolio" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Data portofolio</p>
+                                        <p>Galeri Sekolah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">

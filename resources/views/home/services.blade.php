@@ -50,7 +50,7 @@
                         <a class="nav-link fw-bolder active" href="services">Prestasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="portofolio">Portoflio</a>
+                        <a class="nav-link fw-bolder" href="portofolio">Galeri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bolder" href="contact">Kontak</a>
@@ -86,50 +86,19 @@
                     Kami bangga atas berbagai prestasi yang telah kami raih sepanjang perjalanan kami. Berikut adalah
                     beberapa penghargaan dan pencapaian yang telah diraih.
                 </p>
-                <div class="row mt-5">
-                    <div class="col-md-4">
-                        <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                            <img src="assets/img/juara1.jpg" class="card-img-top" alt="Penghargaan Nasional" />
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <i class="fa fa-trophy fa-lg fa-3x"></i>
-                                    <div class="card-title fw-bolder mt-4">Penghargaan Nasional</div>
-                                    <p class="card-description mt-3">
-                                        Prestasi ini diberikan atas inovasi dan kontribusi dalam bidang teknologi.
-                                    </p>
+                <div class="row">
+                    @foreach ($services as $index => $service)
+                        <div class="col-md-4 mb-4" data-aos="fade-up">
+                            <div class="card" style="width: 100%;">
+                                <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
+                                    alt="{{ $service->title }}" style="max-width: 100%; height: auto;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title font-bold">{{ $service->title }}</h5>
+                                    <p class="card-text-muted">{{ $service->description }}</p>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                            <img src="assets/img/juara2.jpg" class="card-img-top" alt="Inovasi Terbaik" />
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <i class="fa fa-medal fa-lg fa-3x"></i>
-                                    <div class="card-title fw-bolder mt-4">Inovasi Terbaik</div>
-                                    <p class="card-description mt-3">
-                                        Penghargaan atas inovasi di bidang pengembangan perangkat lunak.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                            <img src="assets/img/juara3.jpg" class="card-img-top" alt="Kontribusi Sosial" />
-                            <div class="card-body">
-                                <div class="card-icon">
-                                    <i class="fa fa-award fa-lg fa-3x"></i>
-                                    <div class="card-title fw-bolder mt-4">Kontribusi Sosial</div>
-                                    <p class="card-description mt-3">
-                                        Penghargaan ini diberikan atas kontribusi dalam pengembangan komunitas digital.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Tambahkan lebih banyak penghargaan di sini jika diperlukan -->
+                    @endforeach
                 </div>
             </div>
         </div>

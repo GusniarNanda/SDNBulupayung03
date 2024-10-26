@@ -47,10 +47,10 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="services">Service</a>
+                        <a class="nav-link fw-bolder" href="services">Prestasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="portofolio">Portoflio</a>
+                        <a class="nav-link fw-bolder" href="portofolio">Galeri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bolder" href="contact">Kontak</a>
@@ -68,7 +68,7 @@
                 <h2>About</h2>
                 <ol class="d-flex list-unstyled">
                     <li>Home</li>
-                    <li>About</li>
+                    <li>Visi Misi</li>
                 </ol>
             </div>
         </div>

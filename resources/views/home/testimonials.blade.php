@@ -36,21 +36,21 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link fw-bolder dropdown-toggle active" href="#" id="navbarDropDdownMenuLink"
                             role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            About
+                            Sarpras
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="about">Visi Misi</a></li>
                             <li><a class="dropdown-item" href="team">Guru</a></li>
                             <li>
-                                <a class="dropdown-item active" href="testimonial">Sarana & Prasarana</a>
+                                <a class="dropdown-item active" href="testimonial">Sarpras</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="services">Service</a>
+                        <a class="nav-link fw-bolder" href="services">Prestasi</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="portofolio">Portofolio</a>
+                        <a class="nav-link fw-bolder" href="portofolio">Galeri</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bolder" href="contact">Kontak</a>

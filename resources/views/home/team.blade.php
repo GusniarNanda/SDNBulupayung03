@@ -94,7 +94,7 @@
                                     alt="{{ $team->title }}" style="max-width: 100%; height: auto;">
                                 <div class="card-body text-center">
                                     <h5 class="card-title font-bold">{{ $team->title }}</h5>
-                                    <p class="card-text-muted">Kepala Sekolah</p>
+                                    <p class="card-text-muted">{{ $team->description }}</p>
                                 </div>
                             </div>
                         </div>

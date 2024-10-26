@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="/">Home</a>
+                        <a class="nav-link fw-bolder active" href="/">Home</a>
                     </li>
 
                     <li class="nav-item dropdown">
@@ -77,7 +77,7 @@
     <!-- CAROUSEL -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
-            @foreach ($sliders as $index => $slider)    
+            @foreach ($sliders as $index => $slider)
                 <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
                     <img src="{{ Storage::url('images/' . $slider->image) }}" class="d-block w-100"
                         alt="{{ $slider->title }}" style="max-width: 100%; height: auto;">

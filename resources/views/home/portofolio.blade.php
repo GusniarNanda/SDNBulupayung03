@@ -39,15 +39,15 @@
                             About
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about">About Us</a></li>
-                            <li><a class="dropdown-item" href="team">Team</a></li>
+                            <li><a class="dropdown-item" href="about">Visi Misi</a></li>
+                            <li><a class="dropdown-item" href="team">Guru</a></li>
                             <li>
-                                <a class="dropdown-item" href="testimonial">Testimonial</a>
+                                <a class="dropdown-item" href="testimonial">Sarpras</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="services">Service</a>
+                        <a class="nav-link fw-bolder" href="services">Prestasi</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link fw-bolder active" href="portofolio">Galeri</a>

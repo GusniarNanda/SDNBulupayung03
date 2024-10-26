@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Models\Team;
 use App\Models\Slider;
 use App\Models\Testimonial;
+use App\Models\Services;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class HomeController extends Controller
@@ -46,7 +48,8 @@ class HomeController extends Controller
 
     public function services()
     {
-        return view('home.services');
+        $services = Service::all();
+        return view('home.services', compact('services'));
     }
 
 }
