@@ -11,9 +11,11 @@ use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
+use App\Http\Controllers\UserController;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Team;
+use App\Models\User;
 use Illuminate\Support\Facades\Route;
 
 //Home
@@ -47,4 +49,8 @@ Route::as('admin.')->prefix('admin')->group(function () {
 
     Route::get('about', [AboutController::class, 'index']);
     Route::put('about/{id}', [AboutController::class, 'update']); 
+
+   // Route::get('/profile/settings', [UserController::class, 'edit'])->name('profile.settings');
+   Route::get('profile', [UserController::class, 'index'])->name('profile');
+
 });

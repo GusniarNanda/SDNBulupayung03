@@ -15,12 +15,14 @@
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
     <style>
-.carousel-item img {
-    max-height: 400px; /* Ubah tinggi maksimum sesuai kebutuhan */
-    width: 100%; /* Membuat gambar responsif */
-    object-fit: contain; /* Gambar tidak akan terpotong */
-}
-
+        .carousel-item img {
+            max-height: 400px;
+            /* Ubah tinggi maksimum sesuai kebutuhan */
+            width: 100%;
+            /* Membuat gambar responsif */
+            object-fit: contain;
+            /* Gambar tidak akan terpotong */
+        }
     </style>
 
     <title>Company</title>
@@ -63,35 +65,41 @@
                     <li class="nav-item">
                         <a class="nav-link fw-bolder" href="contact">Kontak</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="login">Login</a>
+                    </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- END NAVBAR -->
 
-   <!-- CAROUSEL -->
-<div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-inner">
-        @foreach ($sliders as $index => $slider)
-            <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
-                    <img src="{{ Storage::url('images/' . $slider->image) }}" class="d-block w-100" alt="{{ $slider->title }}" style="max-width: 100%; height: auto;">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>{{ $slider->title }}</h5>
-                    <p>{{ $slider->description }}</p> <!-- Menggunakan <p> untuk deskripsi -->
+    <!-- CAROUSEL -->
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            @foreach ($sliders as $index => $slider)    
+                <div class="carousel-item {{ $index == 0 ? 'active' : '' }}">
+                    <img src="{{ Storage::url('images/' . $slider->image) }}" class="d-block w-100"
+                        alt="{{ $slider->title }}" style="max-width: 100%; height: auto;">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5>{{ $slider->title }}</h5>
+                        <p>{{ $slider->description }}</p> <!-- Menggunakan <p> untuk deskripsi -->
+                    </div>
                 </div>
-            </div>
-        @endforeach
-    </div>
+            @endforeach
+        </div>
 
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
 
     <!-- END CAROUSEL -->
 
@@ -272,7 +280,7 @@
             <div class="row mt-5">
                 <div class="col-md-12">
                     <div class="masonry portofolio-container" data-aos="zoom-in-up">
-                        <div class="masonry-sizer"></div>
+                        < class="masonry-sizer"></ div>
                         <div class="masonry-item m-2 portofolio-item filter-web">
                             <img src="/assets/img/p1.jpg" alt="" class="img-fluid" />
                         </div>

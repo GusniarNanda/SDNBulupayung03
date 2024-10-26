@@ -51,7 +51,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         <img src="/lte/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
                     </div>
                     <div class="info">
-                        <a href="/" class="d-block">{{ Auth::user()->name }}</a>
+                        <a href="/admin/profile" class="d-block">{{ Auth::user()->name }}</a>
                     </div>
                 </div>
 
@@ -100,7 +100,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                     <a href="/admin/testimonial" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Testimonials</p>
+                                        <p>Sarana & Prasarana</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -118,7 +118,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                     <a href="/admin/teams" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Teams</p>
+                                        <p>Data Guru</p>
                                     </a>
                                 </li>
                             </ul>

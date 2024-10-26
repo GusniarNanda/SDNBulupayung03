@@ -85,62 +85,19 @@
                     SDN 3 Bulupayung memiliki beragam sarana dan prasarana yang mendukung proses pembelajaran dan
                     kegiatan sekolah lainnya.
                 </p>
-                <div class="row mt-5">
-                    <!-- Item 1: Laboratorium Komputer -->
-                    <div class="col-md-4 mt-4" data-aos="fade-right">
-                        <div class="card border-0 shadow shadow-sm">
-                            <img src="/assets/img/lab.jpg" class="card-img-top" alt="Laboratorium Komputer">
-                            <div class="card-body">
-                                <h5 class="card-title">Laboratorium Komputer</h5>
-                                <p class="card-text">Fasilitas laboratorium komputer dengan perangkat modern untuk
-                                    menunjang pembelajaran teknologi informasi.</p>
+                <div class="row">
+                    @foreach ($testimonials as $index => $testimonial)
+                        <div class="col-md-4 mb-4" data-aos="fade-up">
+                            <div class="card" style="width: 100%;">
+                                <img src="{{ Storage::url('images/' . $testimonial->image) }}" class="card-img-top"
+                                    alt="{{ $testimonial->title }}" style="max-width: 100%; height: auto;">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title font-bold">{{ $testimonial->title }}</h5>
+                                    <p class="card-text-muted">{{ $testimonial->description }}</p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- Item 2: Perpustakaan -->
-                    <div class="col-md-4 mt-4" data-aos="fade-left">
-                        <div class="card border-0 shadow shadow-sm">
-                            <img src="/assets/img/perpus.jpg" class="card-img-top" alt="Perpustakaan">
-                            <div class="card-body">
-                                <h5 class="card-title">Perpustakaan</h5>
-                                <p class="card-text">Perpustakaan yang nyaman dengan koleksi buku yang lengkap untuk
-                                    mendukung kegiatan belajar siswa.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 3: Lapangan Olahraga -->
-                    <div class="col-md-4 mt-4" data-aos="fade-right">
-                        <div class="card border-0 shadow shadow-sm">
-                            <img src="/assets/img/lapangan.jpg" class="card-img-top" alt="Lapangan Olahraga">
-                            <div class="card-body">
-                                <h5 class="card-title">Lapangan Olahraga</h5>
-                                <p class="card-text">Lapangan olahraga yang luas untuk kegiatan olahraga siswa dan
-                                    acara-acara sekolah.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 4: Ruang Kelas -->
-                    <div class="col-md-4 mt-4" data-aos="fade-left">
-                        <div class="card border-0 shadow shadow-sm">
-                            <img src="/assets/img/kelas.jpg" class="card-img-top" alt="Ruang Kelas">
-                            <div class="card-body">
-                                <h5 class="card-title">Ruang Kelas</h5>
-                                <p class="card-text">Ruang kelas yang nyaman dan dilengkapi dengan fasilitas
-                                    pembelajaran interaktif.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Item 5: Aula Sekolah -->
-                    <div class="col-md-4 mt-4" data-aos="fade-right">
-                        <div class="card border-0 shadow shadow-sm">
-                            <img src="/assets/img/auditorium.jpg" class="card-img-top" alt="Aula Sekolah">
-                            <div class="card-body">
-                                <h5 class="card-title">Aula Sekolah</h5>
-                                <p class="card-text">Aula yang digunakan untuk berbagai kegiatan sekolah seperti acara
-                                    pertemuan, seminar, dan kegiatan ekstrakurikuler.</p>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>

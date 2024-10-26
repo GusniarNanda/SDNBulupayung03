@@ -35,26 +35,27 @@ class TestimonialController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
+    public function store(Request $request) {
         $request->validate([
-            'title'=> 'required','description' => 'required','image' => 'required|image',
+            'title' => 'required',
+            'description' => 'required',
+            'image' => 'required|image',
         ]);
-
+    
         $input = $request->all();
-
-        if ($image = $request->file('image')) 
-        {
-            $destinationPath = 'image/';
+    
+        if ($image = $request->file('image')) {
+            // Menyimpan gambar di storage/app/public/images
             $imageName = $image->getClientOriginalName();
-            $image->move($destinationPath,$imageName);
+            $image->storeAs('public/images', $imageName); // Gunakan storeAs untuk menyimpan di storage/app/public/images
             $input['image'] = $imageName;
         }
-
+    
         Testimonial::create($input);
+    
+        return redirect('/admin/testimonial')->with('message', 'Data Berhasil Ditambahkan');
+}
 
-        return redirect('/admin/testimonial')->with('message','Data Berhasil Ditambahkan');
-    }
 
     /**
      * Display the specified resource.
@@ -94,13 +95,12 @@ class TestimonialController extends Controller
         $input = $request->all();
 
         if ($image = $request->file('image')) {
-            $destinationPath = 'image/';
-            $imageName = $image->getClientOriginalName();
-            $image->move($destinationPath,$imageName);
+            $imageName = time() . '_' . $image->getClientOriginalName();
+            $image->storeAs('public/images', $imageName);
             $input['image'] = $imageName;
         } else {
             unset($input['image']);
-        }
+        }        
 
         $testimonial->update($input);
 

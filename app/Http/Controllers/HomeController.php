@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Team;
 use App\Models\Slider;
+use App\Models\Testimonial;
+use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class HomeController extends Controller
 {
@@ -38,11 +40,13 @@ class HomeController extends Controller
 
     public function testimonial()
     {
-        return view('home.testimonials');
+        $testimonials = Testimonial::all();
+        return view('home.testimonials', compact('testimonials'));
     }
 
     public function services()
     {
         return view('home.services');
     }
+
 }
