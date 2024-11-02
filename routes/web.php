@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
@@ -26,6 +27,7 @@ Route::get('/portofolio', [HomeController::class, 'portofolio']);
 Route::get('/services', [HomeController::class, 'services']);
 Route::get('/team', [HomeController::class, 'team']);
 Route::get('/testimonial', [HomeController::class, 'testimonial']);
+Route::get('/berita', [HomeController::class, 'berita']);
 
 
 //Auth
@@ -47,8 +49,7 @@ Route::as('admin.')->prefix('admin')->group(function () {
     Route::get('contact', [ContactController::class, 'index']);
     Route::put('contact/{id}', [ContactController::class, 'update']); 
 
-    Route::get('about', [AboutController::class, 'index']);
-    Route::put('about/{id}', [AboutController::class, 'update']); 
+    Route::resource('berita', BeritaController::class);
 
    // Route::get('/profile/settings', [UserController::class, 'edit'])->name('profile.settings');
    Route::get('profile', [UserController::class, 'index'])->name('profile');

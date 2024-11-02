@@ -48,14 +48,14 @@
                     beberapa penghargaan dan pencapaian yang telah diraih.
                 </p>
                 <div class="row">
-                    @foreach ($services as $index => $service)
+                    @foreach ($beritas as $index => $berita)
                         <div class="col-md-4 mb-4" data-aos="fade-up">
                             <div class="card" style="width: 100%;">
-                                <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
-                                    alt="{{ $service->title }}" style="max-width: 100%; height: auto;">
+                                <img src="{{ Storage::url('images/' . $berita->gambar) }}" class="card-img-top"
+                                    alt="{{ $berita->judul }}" style="max-width: 100%; height: auto;">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title font-bold">{{ $service->title }}</h5>
-                                    <p class="card-text-muted">{{ $service->description }}</p>
+                                    <h5 class="card-title font-bold">{{ $berita->judul }}</h5>
+                                    <p class="card-text-muted">{{ Str::limit($berita->konten, 100, '...') }}</p>
                                 </div>
                             </div>
                         </div>

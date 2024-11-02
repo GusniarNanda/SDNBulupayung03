@@ -8,6 +8,7 @@ use App\Models\Team;
 use App\Models\Slider;
 use App\Models\Testimonial;
 use App\Models\Services;
+use App\Models\Berita;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class HomeController extends Controller
@@ -16,7 +17,8 @@ class HomeController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        return view('home.index', compact('sliders'));
+        $services = Service::all();
+        return view('home.index', compact('sliders' , 'services'));
     }
     
     public function about()
@@ -50,6 +52,12 @@ class HomeController extends Controller
     {
         $services = Service::all();
         return view('home.services', compact('services'));
+    }
+
+    public function berita()
+    {
+        $beritas = Berita::all();
+        return view('home.berita', compact('beritas'));
     }
 
 }

@@ -30,48 +30,7 @@
 
 <body>
     <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow shadow-sm fixed-top py-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="#"><span class="primary">SDN 3</span> Bulupayung</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder active" href="/">Home</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropDdownMenuLink" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
-                            About
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="about">Visi Misi</a></li>
-                            <li><a class="dropdown-item" href="team">Guru</a></li>
-                            <li>
-                                <a class="dropdown-item" href="testimonial">Sarpras</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="services">Prestasi</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="portofolio">Galeri</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="contact">Kontak</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="login">Login</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    @extends('layout.navbar');
     <!-- END NAVBAR -->
 
     <!-- CAROUSEL -->
@@ -171,90 +130,21 @@
                 aliquam.
             </p>
             <div class="row mt-5">
+                @foreach ($services as $service)
                 <div class="col-md-4">
                     <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
+                        <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
+                                    alt="{{ $service->title }}" style="max-width: 100%; height: auto;">
                         <div class="card-body">
                             <div class="card-icon">
                                 <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">Lorem ipsum</div>
-                                <p class="card-description mt-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Magni nam vero, dolorem iusto eum voluptatibus?
-                                </p>
+                                <div class="card-title fw-bolder mt-4">{{$service->title }}</div>
+                                <p class="card-description mt-3">{{ $service->description }} </p>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                        <div class="card-body">
-                            <div class="card-icon">
-                                <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">Lorem ipsum</div>
-                                <p class="card-description mt-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Magni nam vero, dolorem iusto eum voluptatibus?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                        <div class="card-body">
-                            <div class="card-icon">
-                                <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">Lorem ipsum</div>
-                                <p class="card-description mt-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Magni nam vero, dolorem iusto eum voluptatibus?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                        <div class="card-body">
-                            <div class="card-icon">
-                                <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">Lorem ipsum</div>
-                                <p class="card-description mt-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Magni nam vero, dolorem iusto eum voluptatibus?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                        <div class="card-body">
-                            <div class="card-icon">
-                                <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">Lorem ipsum</div>
-                                <p class="card-description mt-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Magni nam vero, dolorem iusto eum voluptatibus?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                        <div class="card-body">
-                            <div class="card-icon">
-                                <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">Lorem ipsum</div>
-                                <p class="card-description mt-3">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Magni nam vero, dolorem iusto eum voluptatibus?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> 
+                @endforeach
             </div>
         </div>
     </div>
@@ -266,65 +156,67 @@
             <div class="title-container">
                 <h2 class="text-center fw-bold">Galeri Sekolah</h2>
             </div>
-            <div class="row mt-4 ">
+            <div class="row mt-4">
                 <div class="col-md-12 d-flex justify-content-center">
                     <ul class="list-unstyled d-flex portofolio-filters">
                         <li data-filter="*" class="py-2 px-4 filter-active text-white">ALL</li>
                         <li data-filter=".filter-web" class="py-2 px-4">Web</li>
                         <li data-filter=".filter-design" class="py-2 px-4">Design</li>
                         <li data-filter=".filter-photo" class="py-2 px-4">Photography</li>
-
                     </ul>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-md-12">
                     <div class="masonry portofolio-container" data-aos="zoom-in-up">
-                        < class="masonry-sizer"></ div>
-                        <div class="masonry-item m-2 portofolio-item filter-web">
-                            <img src="/assets/img/p1.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-design">
-                            <img src="/assets/img/p2.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-design">
-                            <img src="/assets/img/p3.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-web">
-                            <img src="/assets/img/p4.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-design">
-                            <img src="/assets/img/p5.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-photo">
-                            <img src="/assets/img/p6.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-web">
-                            <img src="/assets/img/p7.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-web">
-                            <img src="/assets/img/p8.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-photo">
-                            <img src="/assets/img/p9.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-web">
-                            <img src="/assets/img/p10.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-design">
-                            <img src="/assets/img/p11.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-design">
-                            <img src="/assets/img/p12.jpg" alt="" class="img-fluid" />
-                        </div>
-                        <div class="masonry-item m-2 portofolio-item filter-design">
-                            <img src="/assets/img/p13.jpg" alt="" class="img-fluid" />
-                        </div>
+                        <div class="masonry-sizer">
+                            <div class="masonry-item m-2 portofolio-item filter-web">
+                                <img src="/assets/img/p1.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-design">
+                                <img src="/assets/img/p2.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-design">
+                                <img src="/assets/img/p3.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-web">
+                                <img src="/assets/img/p4.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-design">
+                                <img src="/assets/img/p5.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-photo">
+                                <img src="/assets/img/p6.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-web">
+                                <img src="/assets/img/p7.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-web">
+                                <img src="/assets/img/p8.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-photo">
+                                <img src="/assets/img/p9.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-web">
+                                <img src="/assets/img/p10.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-design">
+                                <img src="/assets/img/p11.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-design">
+                                <img src="/assets/img/p12.jpg" alt="" class="img-fluid" />
+                            </div>
+                            <div class="masonry-item m-2 portofolio-item filter-design">
+                                <img src="/assets/img/p13.jpg" alt="" class="img-fluid" />
+                            </div>
+                        </div> <!-- Perbaikan pada tag ini -->
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- END PORTOFOLIO US -->
 
 
