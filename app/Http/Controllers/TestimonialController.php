@@ -46,7 +46,7 @@ class TestimonialController extends Controller
     
         if ($image = $request->file('image')) {
             // Menyimpan gambar di storage/app/public/images
-            $imageName = $image->getClientOriginalName();
+            $imageName = rand() . $image->getClientOriginalName();
             $image->storeAs('public/images', $imageName); // Gunakan storeAs untuk menyimpan di storage/app/public/images
             $input['image'] = $imageName;
         }

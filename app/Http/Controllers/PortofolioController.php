@@ -46,7 +46,7 @@ class PortofolioController extends Controller
         if ($image = $request->file('image')) 
         {
             $destinationPath = 'image/';
-            $imageName = $image->getClientOriginalName();
+            $imageName = rand() . $image->getClientOriginalName();
             $image->move($destinationPath,$imageName);
             $input['image'] = $imageName;
         }
