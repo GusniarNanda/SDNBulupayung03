@@ -79,35 +79,6 @@
                     </div>
                 </div>
                 <div></div>
-                <div class="row mt-5"></div>
-                <div class="col-md-12">
-                    <div class="card border-0 shadow">
-                        <div class="card-body p-4">
-                            <div class="row mt-4">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name" />
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Email" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-md-12">
-                                <input type="text" class="form-control" placeholder="Subject" />
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <div class="col-md-12">
-                                <textarea name="" id="" cols="30" rows="10" class="form-control"
-                                    placeholder="Your Messsage"></textarea>
-                            </div>
-                        </div>
-                        <div class="row mt-4">
-                            <button type="submit" class="btn btn-submit">Send Message</button>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
