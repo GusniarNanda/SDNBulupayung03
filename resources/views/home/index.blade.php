@@ -265,7 +265,7 @@
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
-                            <h2 class="fw-bold">COMPANY</h2>
+                            <h2 class="fw-bold">SDN 3 Bulupayung</h2>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Repellat consequuntur mamgnam commodi volluptatem quas? Itaque
@@ -345,16 +345,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-3">
-                            <h4 class="fw-bold">Join Our Newsletter</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="yourmail@example.com" />
-                                <button class="btn btn-subscribe" type="button" id="inputGroupFileAddon04">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -365,7 +356,7 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
                         <div class="copyright">
-                            &copy; Copyright <strong>Company</strong> All Right Reserved
+                            &copy; Copyright <strong>SDN 3 Bulupayung</strong> All Right Reserved
                         </div>
                         <div class="credits">Designed By Nanda Gusniar Pratama</div>
                     </div>

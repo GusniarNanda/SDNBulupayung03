@@ -58,14 +58,29 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item">
-                            <a href="/" target="_blank" class="nav-link">
-                                <i class="nav-icon fas fa-link"></i>
+                        <li class="nav-item" id="loginIcon">
+                            <a href="{{ route('login') }}" class="nav-link">
+                                <i class="nav-icon fas fa-user-circle" style="font-size: 1.5em;"></i>
                                 <p>
                                     Lihat Website
                                 </p>
                             </a>
                         </li>
+
+                        <script>
+                            // Fungsi untuk mengecek apakah ikon Login perlu di-hide
+                            function checkHideLoginIcon() {
+                                if (localStorage.getItem('hideLoginIcon') === 'true') {
+                                    document.getElementById('loginIcon').style.display = 'none';
+                                    // Hapus status setelah meng-hide
+                                    localStorage.removeItem('hideLoginIcon');
+                                }
+                            }
+
+                            // Panggil fungsi saat halaman dimuat
+                            document.addEventListener('DOMContentLoaded', checkHideLoginIcon);
+                        </script>
+
 
                         <li class="nav-item menu-open">
                             <a href="#" class="nav-link">

@@ -72,7 +72,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-3">
-                    <h2 class="fw-bold">COMPANY</h2>
+                    <h2 class="fw-bold">SDN 3 Bulupayung</h2>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat consequuntur mamgnam commodi
                         voluptatem quas? Itaque quo obcaecati harum ut maxime.</p>
                 </div>
