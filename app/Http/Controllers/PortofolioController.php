@@ -99,7 +99,8 @@ class PortofolioController extends Controller
             $imageName = $image->getClientOriginalName();
             $image->move($destinationPath,$imageName);
             $input['image'] = $imageName;
-        }else{
+        }
+        else {
             unset($input['image']);
         }
 

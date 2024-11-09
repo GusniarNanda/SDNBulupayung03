@@ -123,7 +123,7 @@
     <div class="services mt-5 bg-light py-5">
         <div class="container">
             <div class="title-container text-center">
-                <h2 class="fw-bold">SERVICES</h2>
+                <h2 class="fw-bold">PRESTASI</h2>
             </div>
             <p class="text-center mt-4">
                 lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
@@ -131,19 +131,19 @@
             </p>
             <div class="row mt-5">
                 @foreach ($services as $service)
-                <div class="col-md-4">
-                    <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                        <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
-                                    alt="{{ $service->title }}" style="max-width: 100%; height: auto;">
-                        <div class="card-body">
-                            <div class="card-icon">
-                                <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">{{$service->title }}</div>
-                                <p class="card-description mt-3">{{ $service->description }} </p>
+                    <div class="col-md-4">
+                        <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
+                            <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
+                                alt="{{ $service->title }}" style="max-width: 100%; height: auto;">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="fa fa-book fa-lg fa-3x"></i>
+                                    <div class="card-title fw-bolder mt-4">{{ $service->title }}</div>
+                                    <p class="card-description mt-3">{{ $service->description }} </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> 
                 @endforeach
             </div>
         </div>

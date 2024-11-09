@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Berita;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class BeritaController extends Controller
 {
@@ -76,7 +77,7 @@ class BeritaController extends Controller
      */
     public function edit(Berita $berita)
     {
-        //
+        return view('admin.berita.edit', compact('berita'));
     }
 
     /**
@@ -88,7 +89,28 @@ class BeritaController extends Controller
      */
     public function update(Request $request, Berita $berita)
     {
-        //
+        $request->validate([
+            'judul' => 'required',
+            'konten' => 'required',
+            'gambar' => 'image|nullable|max:1999',
+        ]);
+    
+        $berita->judul = $request->judul;
+        $berita->konten = $request->konten;
+    
+        // Update gambar jika ada file baru yang diunggah
+        if ($request->hasFile('gambar')) {
+            if ($berita->gambar) {
+                Storage::delete('public/images/' . $berita->gambar);
+            }
+            $imageName = $request->file('gambar')->getClientOriginalName();
+            $request->file('gambar')->storeAs('public/images', $imageName);
+            $berita->gambar = $imageName;
+        }
+    
+        $berita->save();
+    
+        return redirect()->route('berita.index')->with('message', 'Berita berhasil diperbarui.');
     }
 
     /**

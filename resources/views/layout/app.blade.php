@@ -27,7 +27,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Left navbar links -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i
+                    <a class="nav-link" data-widget="pushmenu" href="dashboard" role="button"><i
                             class="fas fa-bars"></i></a>
                 </li>
             </ul>
@@ -46,8 +46,6 @@ scratch. This page gets rid of all links and provides the needed markup only.
             <!-- Sidebar -->
             <div class="sidebar">
                 <!-- Sidebar user panel (optional) -->
-
-
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
@@ -81,7 +79,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                 <li class="nav-item">
                                     <a href="/admin/sliders" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
-                                        <p>Data Slider</p>
+                                        <p>Highlight Sekolah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -118,7 +116,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
                         <li class="nav-item">
                             <a href="/admin/berita" class="nav-link">
-                                <i class="nav-icon fas fa-user"></i>
+                                <i class="fa fa-solid fa-bullhorn"></i>
                                 <p>
                                     Berita
                                 </p>

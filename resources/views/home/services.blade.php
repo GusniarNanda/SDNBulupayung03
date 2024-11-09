@@ -49,7 +49,7 @@
                 </p>
                 <div class="row">
                     @foreach ($services as $index => $service)
-                        <div class="col-md-4 mb-4" data-aos="fade-up">
+                        <div class="col-md-3 mb-3" data-aos="fade-up">
                             <div class="card" style="width: 100%;">
                                 <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
                                     alt="{{ $service->title }}" style="max-width: 100%; height: auto;">

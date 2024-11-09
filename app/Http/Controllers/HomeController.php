@@ -60,4 +60,11 @@ class HomeController extends Controller
         return view('home.berita', compact('beritas'));
     }
 
+    public function detailberita($id)
+    {
+    
+    $berita = Berita::whereId($id)->firstOrFail();
+    return view('home.detailberita', compact('berita'));
+    }
+
 }

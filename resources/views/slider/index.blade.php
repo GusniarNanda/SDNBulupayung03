@@ -39,7 +39,7 @@
                             <td>{{ $slider->title }}</td>
                             <td>{{ $slider->description }}</td>
                             <td>
-                                <img src="/image/{{ $slider->image }}" alt="" class="img-fluid" width="90">
+                                <img src="{{ Storage::url('images/' . $slider->image) }}" alt="" class="img-fluid" width="90">
                             </td>
                             <td>
                                 <a href="{{ route('admin.sliders.edit', $slider->id) }}" class="btn btn-warning">Edit</a>

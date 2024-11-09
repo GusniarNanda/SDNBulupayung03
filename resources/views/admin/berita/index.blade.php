@@ -15,7 +15,11 @@
         <tbody>
             @foreach ($beritas as $berita)
                 <tr>
-                    <td>{{ $berita->judul }}</td>
+                    <td>
+                        <a href="{{ route('admin.berita.show', $berita->id) }}">
+                            {{ $berita->judul }}
+                        </a>
+                    </td>
                     <td>{{ Str::limit($berita->konten, 50) }}</td>
                     <td>
                         @if ($berita->gambar)
@@ -27,8 +31,7 @@
                     </td>
                     <td>
                         <a href="{{ route('admin.berita.edit', $berita->id) }}" class="btn btn-warning">Edit</a>
-                        <form action="{{ route('admin.berita.destroy', $berita->id) }}" method="POST"
-                            style="display:inline;">
+                        <form action="{{ route('admin.berita.destroy', $berita->id) }}" method="POST">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Hapus</button>

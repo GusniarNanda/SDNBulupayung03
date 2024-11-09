@@ -28,6 +28,7 @@ Route::get('/services', [HomeController::class, 'services']);
 Route::get('/team', [HomeController::class, 'team']);
 Route::get('/testimonial', [HomeController::class, 'testimonial']);
 Route::get('/berita', [HomeController::class, 'berita']);
+Route::get('/berita/{id}', [HomeController::class, 'detailberita'])->name('berita');
 
 
 //Auth
@@ -50,6 +51,7 @@ Route::as('admin.')->prefix('admin')->group(function () {
     Route::put('contact/{id}', [ContactController::class, 'update']); 
 
     Route::resource('berita', BeritaController::class);
+    
 
    // Route::get('/profile/settings', [UserController::class, 'edit'])->name('profile.settings');
    Route::get('profile', [UserController::class, 'index'])->name('profile');

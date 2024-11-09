@@ -15,132 +15,75 @@
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <title>Prestasi</title>
+    <title>Berita</title>
 </head>
 
 <body>
     <!-- NAVBAR -->
-    @extends('layout.navbar');
+    @extends('layout.navbar')
 
-    <!-- END NAVBAR -->
-
-    <!-- breadcumbs -->
+    <!-- Breadcumbs -->
     <div class="breadcumbs py-2">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center text-white">
-                <h2>Prestasi</h2>
+                <h2>Berita</h2>
                 <ol class="d-flex list-unstyled">
                     <li>Home</li>
-                    <li>Prestasi</li>
+                    <li>Berita</li>
                 </ol>
             </div>
         </div>
     </div>
     <!-- end breadcumbs -->
 
-    <!-- Prestasi -->
+    <!-- Daftar Berita -->
     <div class="teams bg-light py-5">
         <div class="container">
-            <div class="title-container">
-                <h2 class="text-center fw-bold">PRESTASI</h2>
-                <p class="text-center mt-4">
-                    Kami bangga atas berbagai prestasi yang telah kami raih sepanjang perjalanan kami. Berikut adalah
-                    beberapa penghargaan dan pencapaian yang telah diraih.
+            <div class="title-container mb-4">
+                <h2 class="text-center fw-bold">Berita Terbaru</h2>
+                <p class="text-center mt-3">
+                    Lihat berita terbaru dan informasi penting dari sekolah kami.
                 </p>
-                <div class="row">
-                    @foreach ($beritas as $index => $berita)
-                        <div class="col-md-4 mb-4" data-aos="fade-up">
-                            <div class="card" style="width: 100%;">
-                                <img src="{{ Storage::url('images/' . $berita->gambar) }}" class="card-img-top"
-                                    alt="{{ $berita->judul }}" style="max-width: 100%; height: auto;">
-                                <div class="card-body text-center">
-                                    <h5 class="card-title font-bold">{{ $berita->judul }}</h5>
-                                    <p class="card-text-muted">{{ Str::limit($berita->konten, 100, '...') }}</p>
-                                </div>
+            </div>
+
+            <div class="row">
+                @foreach ($beritas as $berita)
+                    <div class="col-md-4 mb-4" data-aos="fade-up">
+                        <div class="card h-100">
+                            <img src="{{ Storage::url('images/' . $berita->gambar) }}" class="card-img-top"
+                                alt="{{ $berita->judul }}" style="max-height: 200px; object-fit: cover;">
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title font-bold">{{ $berita->judul }}</h5>
+                                <p class="card-text">{{ Str::limit($berita->konten, 100) }}</p>
+                                <a class="btn btn-primary mt-auto" href="{{ route('berita', $berita->id) }}">
+                                    Read more →
+                                </a>
                             </div>
                         </div>
-                    @endforeach
-                </div>
+                    </div>
+                @endforeach
             </div>
         </div>
     </div>
-    <!-- end prestasi -->
-
-    <!-- features -->
-    <div class="features mt-5 py-5">
-        <div class="container">
-            <div class="title-container">
-                <h2 class="text-center fw-bold">KEUNGGULAN</h2>
-            </div>
-            <p class="text-center mt-4">Kami memiliki berbagai keunggulan yang mendukung pencapaian prestasi kami,
-                mulai dari inovasi hingga profesionalisme dalam melayani pelanggan.</p>
-            <div class="row mt-5">
-                <div class="col-md-3">
-                    <div class="card border-0 p-4 mt-3 shadow-sm" data-aos="zoom-in">
-                        <div class="card-body d-flex justify-content-around">
-                            <i class="fa fa-lightbulb fa-lg fa-2x"></i>
-                            <h2 class="fs-5">Inovatif</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 p-4 mt-3 shadow-sm" data-aos="zoom-in">
-                        <div class="card-body d-flex justify-content-around">
-                            <i class="fa fa-users fa-lg fa-2x"></i>
-                            <h2 class="fs-5">Kolaboratif</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 p-4 mt-3 shadow-sm" data-aos="zoom-in">
-                        <div class="card-body d-flex justify-content-around">
-                            <i class="fa fa-heart fa-lg fa-2x"></i>
-                            <h2 class="fs-5">Empati</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card border-0 p-4 mt-3 shadow-sm" data-aos="zoom-in">
-                        <div class="card-body d-flex justify-content-around">
-                            <i class="fa fa-award fa-lg fa-2x"></i>
-                            <h2 class="fs-5">Profesional</h2>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- end features -->
+    <!-- end daftar berita -->
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-top bg-dark text-white p-5">
-            <div class="footer mt-5 bg-dark text-white p-5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                            <h2 class="fw-bold">COMPANY</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Repellat consequuntur mamgnam commodi volluptatem quas? Itaque
-                                quo obcaecati harum ut maxime.
-                            </p>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="mb-4">Contact</h5>
-                            <p><i class="fas fa-envelope me-3"></i> mail@company.com</p>
-                            <p><i class="fas fa-phone me-3"></i> +6221 2002 2012</p>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="mb-4">Address</h5>
-                            <p>
-                                <i class="fas fa-home me-3"></i> Jl. Jendral Sudirman Kav. 52,
-                                Jakarta Selatan
-                            </p>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
+    <footer class="footer-top bg-dark text-white p-5 mt-5">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-3">
+                    <h2 class="fw-bold">COMPANY</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat consequuntur mamgnam commodi
+                        voluptatem quas? Itaque quo obcaecati harum ut maxime.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact</h5>
+                    <p><i class="fas fa-envelope me-2"></i>mail@company.com</p>
+                    <p><i class="fas fa-phone me-2"></i>+6221 2002 2012</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Address</h5>
+                    <p><i class="fas fa-home me-2"></i>Jl. Jendral Sudirman Kav. 52, Jakarta Selatan</p>
                 </div>
             </div>
         </div>
@@ -149,7 +92,6 @@
 
     <!-- Optional JavaScript -->
     <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS -->
     <script src="assets/vendor/aos/aos-master/dist/aos.js"></script>
     <script>
         AOS.init({
