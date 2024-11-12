@@ -38,16 +38,16 @@ class PortofolioController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'=> 'required','description' => 'required','image' => 'required|image',
+            'title'=> 'required','description' => 'required','image' => 'required|image', 'kategori' => 'required|string'
         ]);
 
         $input = $request->all();
 
         if ($image = $request->file('image')) 
         {
-            $destinationPath = 'image/';
+            $destinationPath = 'public/images/';
             $imageName = rand() . $image->getClientOriginalName();
-            $image->move($destinationPath,$imageName);
+            $image->storeAs($destinationPath,$imageName);
             $input['image'] = $imageName;
         }
 
@@ -88,16 +88,16 @@ class PortofolioController extends Controller
     public function update(Request $request, portofolio $portofolio)
     {
         $request->validate([
-            'title'=> 'required','description' => 'required','image' => 'image',
+            'title'=> 'required','description' => 'required','image' => 'image','kategori' => 'required|string'
         ]);
 
         $input = $request->all();
 
         if ($image = $request->file('image')) 
         {
-            $destinationPath = 'image/';
+            $destinationPath = 'public/images/';
             $imageName = $image->getClientOriginalName();
-            $image->move($destinationPath,$imageName);
+            $image->storeAs($destinationPath,$imageName);
             $input['image'] = $imageName;
         }
         else {

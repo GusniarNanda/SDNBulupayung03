@@ -9,6 +9,7 @@ use App\Models\Slider;
 use App\Models\Testimonial;
 use App\Models\Services;
 use App\Models\Berita;
+use App\Models\Portofolio;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class HomeController extends Controller
@@ -34,7 +35,8 @@ class HomeController extends Controller
 
     public function portofolio()
     {
-        return view('home.portofolio');
+        $portofolios = Portofolio::all();
+        return view('home.portofolio', compact('portofolios'));
     }
 
     public function contact()

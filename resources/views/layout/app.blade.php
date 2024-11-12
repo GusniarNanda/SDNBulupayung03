@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>@yield('title')</title>
+    <title> </title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -17,6 +17,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <link rel="stylesheet" href="/lte/plugins/fontawesome-free/css/all.min.css">
     <!-- Theme style -->
     <link rel="stylesheet" href="/lte/dist/css/adminlte.min.css">
+    <link rel="stylesheet" href="/assets/vendor/toasteditor/toastui-editor.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -59,27 +60,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item" id="loginIcon">
-                            <a href="{{ route('login') }}" class="nav-link">
+                            <a href="/" target="_blank" class="nav-link">
                                 <i class="nav-icon fas fa-user-circle" style="font-size: 1.5em;"></i>
                                 <p>
                                     Lihat Website
                                 </p>
                             </a>
                         </li>
-
-                        <script>
-                            // Fungsi untuk mengecek apakah ikon Login perlu di-hide
-                            function checkHideLoginIcon() {
-                                if (localStorage.getItem('hideLoginIcon') === 'true') {
-                                    document.getElementById('loginIcon').style.display = 'none';
-                                    // Hapus status setelah meng-hide
-                                    localStorage.removeItem('hideLoginIcon');
-                                }
-                            }
-
-                            // Panggil fungsi saat halaman dimuat
-                            document.addEventListener('DOMContentLoaded', checkHideLoginIcon);
-                        </script>
 
 
                         <li class="nav-item menu-open">
@@ -95,6 +82,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <a href="/admin/sliders" class="nav-link">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Highlight Sekolah</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/visimisi" class="nav-link">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Visi Misi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
@@ -234,6 +227,26 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
+    <script src="/assets/vendor/toasteditor/toastui-editor-all.min.js"></script>
+    <script>
+        function initEditor(selector, value, options = {}) {
+            return new toastui.Editor({
+                el: document.querySelector(selector),
+                height: '400px',
+                initialEditType: 'wysiwyg',
+                placeholder: 'Ketik...',
+                usageStatistics: false,
+                initialValue: value,
+                toolbarItems: [
+                    ['heading', 'bold', 'italic', 'strike'],
+                    ['hr', 'quote'],
+                    ['ul', 'ol', 'task', 'indent', 'outdent'],
+                ],
+                ...options
+            });
+        }
+    </script>
+    @yield('scripts', '')
 </body>
 
 </html>

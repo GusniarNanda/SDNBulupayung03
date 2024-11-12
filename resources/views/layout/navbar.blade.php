@@ -1,6 +1,6 @@
 <?php
 session_start(); // Pastikan sesi dimulai untuk akses ke $_SESSION
-$current_page = basename($_SERVER['PHP_SELF'], ".php"); // Mendapatkan nama file saat ini
+$current_page = basename($_SERVER['PHP_SELF'], '.php'); // Mendapatkan nama file saat ini
 ?>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-white shadow shadow-sm fixed-top py-3">
@@ -13,35 +13,49 @@ $current_page = basename($_SERVER['PHP_SELF'], ".php"); // Mendapatkan nama file
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
-                    <a class="nav-link fw-bolder <?= $current_page == 'index' ? 'active text-success' : '' ?>" href="/">Home</a>
+                    <a class="nav-link fw-bolder <?= $current_page == 'index' ? 'active text-success' : '' ?>"
+                        href="/">Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle <?= in_array($current_page, ['about', 'team', 'testimonial']) ? 'text-success' : '' ?>" href="#" id="navbarDropdownMenuLink" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle <?= in_array($current_page, ['about', 'team', 'testimonial']) ? 'text-success' : '' ?>"
+                        href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
                         About
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a class="dropdown-item <?= $current_page == 'about' ? 'text-success' : '' ?>" href="about">Visi Misi</a></li>
-                        <li><a class="dropdown-item <?= $current_page == 'team' ? 'text-success' : '' ?>" href="team">Guru</a></li>
-                        <li><a class="dropdown-item <?= $current_page == 'testimonial' ? 'text-success' : '' ?>" href="testimonial">Sarpras</a></li>
+                        <li><a class="dropdown-item <?= $current_page == 'about' ? 'text-success' : '' ?>"
+                                href="about">Visi Misi</a></li>
+                        <li><a class="dropdown-item <?= $current_page == 'team' ? 'text-success' : '' ?>"
+                                href="team">Guru</a></li>
+                        <li><a class="dropdown-item <?= $current_page == 'testimonial' ? 'text-success' : '' ?>"
+                                href="testimonial">Sarpras</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bolder <?= $current_page == 'services' ? 'active text-success' : '' ?>" href="services">Prestasi</a>
+                    <a class="nav-link fw-bolder <?= $current_page == 'services' ? 'active text-success' : '' ?>"
+                        href="{{ url('services') }}">Prestasi</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bolder <?= $current_page == 'portofolio' ? 'active text-success' : '' ?>" href="portofolio">Galeri</a>
+                    <a class="nav-link fw-bolder <?= $current_page == 'portofolio' ? 'active text-success' : '' ?>"
+                        href="{{ url('portofolio') }}">Galeri</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bolder <?= $current_page == 'berita' ? 'active text-success' : '' ?>" href="berita">Berita</a>
+                    <a class="nav-link fw-bolder <?= $current_page == 'berita' ? 'active text-success' : '' ?>"
+                        href="berita">Berita</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link fw-bolder <?= $current_page == 'contact' ? 'active text-success' : '' ?>" href="contact">Kontak</a>
+                    <a class="nav-link fw-bolder <?= $current_page == 'contact' ? 'active text-success' : '' ?>"
+                        href="contact">Kontak</a>
                 </li>
-                <?php if (!isset($_SESSION['user_logged_in']) || $_SESSION['user_logged_in'] !== true): ?>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder <?= $current_page == 'login' ? 'active text-success' : '' ?>" href="login">Login</a>
-                    </li>
+
+                <?php if (!Auth::user()): ?>
+
+
+
+                <li class="nav-item">
+                    <a class="nav-link fw-bolder <?= $current_page == 'login' ? 'active text-success' : '' ?>"
+                        href="login">Login</a>
+                </li>
                 <?php endif; ?>
             </ul>
         </div>

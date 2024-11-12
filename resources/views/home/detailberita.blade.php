@@ -18,10 +18,9 @@
     <title>Berita</title>
 </head>
 
-<body>
+<body>  
     <!-- NAVBAR -->
     @extends('layout.navbar');
-
     <!-- END NAVBAR -->
 
     <!-- breadcumbs -->

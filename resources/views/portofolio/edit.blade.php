@@ -8,7 +8,8 @@
         <a href="/portofolios" class="btn btn-primary mb-3">Kembali</a>
         <div class="row">
             <div class="col-md-12">
-                <form action="{{ route('admin.portofolio.update', $portofolio->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.portofolio.update', $portofolio->id) }}" method="POST"
+                    enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     <div class="form-group">
@@ -21,14 +22,21 @@
                     @enderror
                     <div class="form-group">
                         <label for="">Deskripsi</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Deskripsi">
-                            {{ $portofolio->description }}
-                        </textarea>
+                        <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Deskripsi">{{ $portofolio->description }}</textarea>
+
                     </div>
                     @Error('description')
                         <small style="color: red">{{ $message }}</small>
                     @enderror
-                    <img src="/image/{{ $portofolio->image }}" alt="" class="img-fluid">
+                    <div class="form-group">
+                        <label for="">Kategori</label>
+                        <input type="text" class="form-control" name="kategori" placeholder="kategori"
+                            value="{{ $portofolio->kategori }}">
+                    </div>
+                    @Error('kategori')
+                        <small style="color: red">{{ $message }}</small>
+                    @enderror
+                    <img src="{{ Storage::url('images/' . $portofolio->image) }}" alt="" class="img-fluid">
                     <div class="form-group">
                         <label for="">Gambar</label>
                         <input type="file" class="form-control" name="image">

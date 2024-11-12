@@ -30,7 +30,8 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{ route('admin.berita.edit', $berita->id) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ route('admin.beritaedit', ['berita' => $berita->id]) }}" class="btn btn-warning">Edit</a>
+
                         <form action="{{ route('admin.berita.destroy', $berita->id) }}" method="POST">
                             @csrf
                             @method('DELETE')

@@ -25,6 +25,13 @@
                         <small style="color: red">{{ $message }}</small>
                     @enderror
                     <div class="form-group">
+                        <label for="">Kategori</label>
+                        <input type="text" class="form-control" name="kategori" placeholder="kategori">
+                    </div>
+                    @Error('kategori')
+                        <small style="color: red">{{ $message }}</small>
+                    @enderror
+                    <div class="form-group">
                         <label for="">Gambar</label>
                         <input type="file" class="form-control" name="image">
                     </div>
