@@ -2,7 +2,8 @@
 
 @section('content')
     <h1>Edit Berita</h1>
-    <form action="{{ route('admin.beritaupdate', $berita->id) }}" method="POST" enctype="multipart/form-data">
+    <form action="{{ route('admin.beritaupdate', $berita->id) }}" method="POST" enctype="multipart/form-data"
+        id="formEditBerita">
         @csrf
         @method('PUT')
 
@@ -15,9 +16,13 @@
 
         <!-- Form field untuk Konten -->
         <div class="form-group">
-            <label for="konten">Konten:</label>
-            <textarea class="form-control" name="konten" id="konten" required>{{ old('konten', $berita->konten) }}</textarea>
+            <label for="konteneditor">Konten:</label>
+            <div id="konteneditor"></div>
+            <input type="hidden" name="konten" value="{{ old('konten', $berita->konten) }}">
         </div>
+        @error('konten')
+            <small style="color: red">{{ $message }}</small>
+        @enderror
 
         <!-- Form field untuk Gambar -->
         <div class="form-group">
@@ -35,4 +40,20 @@
         <!-- Link untuk kembali -->
         <a href="{{ route('admin.berita.index') }}" class="btn btn-secondary">Kembali</a>
     </form>
+@endsection
+
+@section('scripts')
+    <script>
+        // Inisialisasi editor markdown untuk kolom konten
+        const kontenEditor = initEditor("#konteneditor", document.querySelector('input[name="konten"]').value);
+
+        // Menangani submit form
+        document.querySelector('#formEditBerita').addEventListener('submit', e => {
+            e.preventDefault();
+
+            // Ambil konten dari editor markdown dan set ke input hidden
+            document.querySelector('input[name="konten"]').value = kontenEditor.getHTML();
+            e.target.submit();
+        });
+    </script>
 @endsection

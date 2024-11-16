@@ -36,7 +36,7 @@
 @endsection
 
 
-@section('scripts')
+@section('scripts') 
     <script>
         const visieditor = initEditor("#visieditor", document.querySelector('input[name="visi"]').value)
         const misieditor = initEditor("#misieditor", document.querySelector('input[name="misi"]').value)
