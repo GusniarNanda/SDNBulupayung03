@@ -25,6 +25,7 @@
                         <th>Judul</th>
                         <th>Deskripsi</th>
                         <th>Gambar</th>
+                        <th>Kategori</th>
                         <th>Aksi</th>
 
                     </tr>
@@ -39,10 +40,12 @@
                             <td>{{ $portofolio->title }}</td>
                             <td>{{ $portofolio->description }}</td>
                             <td>
-                                <img src="/image/{{ $portofolio->image }}" alt="" class="img-fluid" width="90">
+                                <img src="{{ Storage::url('images/' . $portofolio->image) }}" alt="" class="img-fluid" width="90">
                             </td>
+                            <td>{{ $portofolio->kategori }}</td>
                             <td>
-                                <a href="{{ route('admin.portofolio.edit', $portofolio->id) }}" class="btn btn-warning">Edit</a>
+                                <a href="{{ route('admin.portofolio.edit', $portofolio->id) }}"
+                                    class="btn btn-warning">Edit</a>
                                 <form action="{{ route('admin.portofolio.destroy', $portofolio->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')

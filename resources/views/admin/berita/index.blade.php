@@ -15,8 +15,12 @@
         <tbody>
             @foreach ($beritas as $berita)
                 <tr>
-                    <td>{{ $berita->judul }}</td>
-                    <td>{{ Str::limit($berita->konten, 50) }}</td>
+                    <td>
+                        <a href="{{ route('admin.berita.show', $berita->id) }}">
+                            {{ $berita->judul }}
+                        </a>
+                    </td>
+                    <td>{!! Str::limit($berita->konten, 50) !!}</td> <!-- Menampilkan konten dengan markdown dirender -->
                     <td>
                         @if ($berita->gambar)
                             <img src="{{ asset('storage/images/' . $berita->gambar) }}" alt="Gambar Berita"
@@ -26,9 +30,10 @@
                         @endif
                     </td>
                     <td>
-                        <a href="{{ route('admin.berita.edit', $berita->id) }}" class="btn btn-warning">Edit</a>
+                        <a href="{{ route('admin.beritaedit', ['berita' => $berita->id]) }}" class="btn btn-warning">Edit</a>
+
                         <form action="{{ route('admin.berita.destroy', $berita->id) }}" method="POST"
-                            style="display:inline;">
+                            style="display: inline;">
                             @csrf
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Hapus</button>

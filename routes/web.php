@@ -13,6 +13,7 @@ use App\Http\Controllers\SliderController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\TestimonialController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\VisiMisiController;
 use App\Models\Service;
 use App\Models\Slider;
 use App\Models\Team;
@@ -28,6 +29,7 @@ Route::get('/services', [HomeController::class, 'services']);
 Route::get('/team', [HomeController::class, 'team']);
 Route::get('/testimonial', [HomeController::class, 'testimonial']);
 Route::get('/berita', [HomeController::class, 'berita']);
+Route::get('/berita/{id}', [HomeController::class, 'detailberita'])->name('berita');
 
 
 //Auth
@@ -49,9 +51,19 @@ Route::as('admin.')->prefix('admin')->group(function () {
     Route::get('contact', [ContactController::class, 'index']);
     Route::put('contact/{id}', [ContactController::class, 'update']); 
 
-    Route::resource('berita', BeritaController::class);
+    Route::resource('berita', BeritaController::class)->names([
+    ]);
+    Route::get('visimisi/edit', [VisiMisiController::class, 'edit'])->name('visimisi.edit' );
+    Route::get('visimisi', [VisiMisiController::class, 'index'])->name('visimisi.index' );
+    Route::post('visimisi', [VisiMisiController::class, 'update'])->name('visimisi.update' );
+    Route::get('admin/berita/{berita}/edit', [BeritaController::class, 'edit'])->name('beritaedit');
+    Route::put('admin/berita/{berita}/update', [BeritaController::class, 'update'])->name('beritaupdate');
+    
+    
+    
 
-   // Route::get('/profile/settings', [UserController::class, 'edit'])->name('profile.settings');
+   // Route::get('/profile/settings', [Use  rController::class, 'edit'])->name('profile.settings');
    Route::get('profile', [UserController::class, 'index'])->name('profile');
 
 });
+

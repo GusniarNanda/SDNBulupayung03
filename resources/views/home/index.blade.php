@@ -123,7 +123,7 @@
     <div class="services mt-5 bg-light py-5">
         <div class="container">
             <div class="title-container text-center">
-                <h2 class="fw-bold">SERVICES</h2>
+                <h2 class="fw-bold">PRESTASI</h2>
             </div>
             <p class="text-center mt-4">
                 lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus,
@@ -131,19 +131,19 @@
             </p>
             <div class="row mt-5">
                 @foreach ($services as $service)
-                <div class="col-md-4">
-                    <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
-                        <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
-                                    alt="{{ $service->title }}" style="max-width: 100%; height: auto;">
-                        <div class="card-body">
-                            <div class="card-icon">
-                                <i class="fa fa-book fa-lg fa-3x"></i>
-                                <div class="card-title fw-bolder mt-4">{{$service->title }}</div>
-                                <p class="card-description mt-3">{{ $service->description }} </p>
+                    <div class="col-md-4">
+                        <div class="card border-0 text-center p-4 mt-3" data-aos="zoom-in">
+                            <img src="{{ Storage::url('images/' . $service->image) }}" class="card-img-top"
+                                alt="{{ $service->title }}" style="max-width: 100%; height: auto;">
+                            <div class="card-body">
+                                <div class="card-icon">
+                                    <i class="fa fa-book fa-lg fa-3x"></i>
+                                    <div class="card-title fw-bolder mt-4">{{ $service->title }}</div>
+                                    <p class="card-description mt-3">{{ $service->description }} </p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div> 
                 @endforeach
             </div>
         </div>
@@ -265,7 +265,7 @@
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-3">
-                            <h2 class="fw-bold">COMPANY</h2>
+                            <h2 class="fw-bold">SDN 3 Bulupayung</h2>
                             <p>
                                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                 Repellat consequuntur mamgnam commodi volluptatem quas? Itaque
@@ -345,16 +345,7 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="col-md-3">
-                            <h4 class="fw-bold">Join Our Newsletter</h4>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="yourmail@example.com" />
-                                <button class="btn btn-subscribe" type="button" id="inputGroupFileAddon04">
-                                    Subscribe
-                                </button>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
             </div>
@@ -365,26 +356,24 @@
                     <div class="col-md-1"></div>
                     <div class="col-md-5">
                         <div class="copyright">
-                            &copy; Copyright <strong>Company</strong> All Right Reserved
+                            &copy; Copyright <strong>SDN 3 Bulupayung</strong> All Right Reserved
                         </div>
                         <div class="credits">Designed By Nanda Gusniar Pratama</div>
                     </div>
                     <div class="col-md-5">
-                        <div class="social-links bg-primary float-end">
-                            <a href="" class="mx-2">
+                        <div class="social-links float-end">
+                            <a href="https://web.facebook.com/nanda.gusniar.10/?locale=id_ID" class="mx-2"
+                                target="_blank">
                                 <i class="fab fa-facebook fa-2x"></i>
                             </a>
-                            <a href="" class="mx-2">
-                                <i class="fab fa-twitter fa-2x"></i>
-                            </a>
-                            <a href="" class="mx-2">
+                            <a href="https://www.instagram.com/gusniarpratama/" class="mx-2" target="_blank">
                                 <i class="fab fa-instagram fa-2x"></i>
                             </a>
-                            <a href="" class="mx-2">
+                            <a href="https://www.youtube.com/c/username" class="mx-2" target="_blank">
                                 <i class="fab fa-youtube fa-2x"></i>
                             </a>
-                            <a href="" class="mx-2">
-                                <i class="fab fa-linkedin fa-2x"></i>
+                            <a href="mailto:boedypratama51@gmail.com" class="mx-2">
+                                <i class="fa fa-envelope fa-2x"></i>
                             </a>
                         </div>
                     </div>
