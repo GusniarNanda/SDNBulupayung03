@@ -361,21 +361,19 @@
                         <div class="credits">Designed By Nanda Gusniar Pratama</div>
                     </div>
                     <div class="col-md-5">
-                        <div class="social-links bg-primary float-end">
-                            <a href="" class="mx-2">
+                        <div class="social-links float-end">
+                            <a href="https://web.facebook.com/nanda.gusniar.10/?locale=id_ID" class="mx-2"
+                                target="_blank">
                                 <i class="fab fa-facebook fa-2x"></i>
                             </a>
-                            <a href="" class="mx-2">
-                                <i class="fab fa-twitter fa-2x"></i>
-                            </a>
-                            <a href="" class="mx-2">
+                            <a href="https://www.instagram.com/gusniarpratama/" class="mx-2" target="_blank">
                                 <i class="fab fa-instagram fa-2x"></i>
                             </a>
-                            <a href="" class="mx-2">
+                            <a href="https://www.youtube.com/c/username" class="mx-2" target="_blank">
                                 <i class="fab fa-youtube fa-2x"></i>
                             </a>
-                            <a href="" class="mx-2">
-                                <i class="fab fa-linkedin fa-2x"></i>
+                            <a href="mailto:boedypratama51@gmail.com" class="mx-2">
+                                <i class="fa fa-envelope fa-2x"></i>
                             </a>
                         </div>
                     </div>

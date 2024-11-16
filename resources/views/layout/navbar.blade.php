@@ -41,7 +41,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php'); // Mendapatkan nama file
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bolder <?= $current_page == 'berita' ? 'active text-success' : '' ?>"
-                        href="berita">Berita</a>
+                        href="{{ url('berita') }}">Berita</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bolder <?= $current_page == 'contact' ? 'active text-success' : '' ?>"
@@ -49,7 +49,6 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php'); // Mendapatkan nama file
                 </li>
 
                 <?php if (!Auth::user()): ?>
-
 
 
                 <li class="nav-item">

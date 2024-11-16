@@ -35,7 +35,7 @@
         </div>
 
         <!-- Submit button -->
-        <button type="submit" class="btn btn-success">Simpan Perubahan</button>
+        <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
 
         <!-- Link untuk kembali -->
         <a href="{{ route('admin.berita.index') }}" class="btn btn-secondary">Kembali</a>

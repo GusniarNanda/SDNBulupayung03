@@ -42,8 +42,8 @@
     <div class="contact mb-5">
         <div class="maps">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13436.778145049544!2d109.01431414352707!3d-7.726552128205826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6513ff9ce0974b%3A0xe43ab6457b7cf178!2sAlun-Alun%20Kota%20Cilacap!5e1!3m2!1sid!2sid!4v1724662735642!5m2!1sid!2sid"
-                width="2000" height="450" style="border: 0" allowfullscreen="" loading="lazy"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2130.0153198567828!2d109.12663644240736!3d-7.594026765008337!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6569730293375b%3A0x2d0040044fbb1de1!2sSD%20Negeri%20Bulupayung%2003!5e1!3m2!1sid!2sid!4v1731730646637!5m2!1sid!2sid"
+                width="2000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="container mt-5">
@@ -57,22 +57,28 @@
                                         <i class="fa fa-map-marker-alt fa-2x primary float-start me-4"></i>
                                         <h4 class="fw-bolder">Location</h4>
                                         <p class="ms-5">
-                                            72F5+3RJ, Cilacap, Sidanegara, Kec. Cilacap Tengah,
-                                            Kabupaten Cilacap, Jawa Tengah 53211
+                                            JL. Tambangan, Rt. 2 Rw. 7, Pasanggiri Bulupayung Kesugihan, Kali Cibito,
+                                            Bulupayung, Kec. Kesugihan, Kabupaten Cilacap, Jawa Tengah 53272
                                         </p>
                                     </div>
                                     <div class="col-md-4">
                                         <i class="fa fa-envelope fa-2x primary float-start me-3"></i>
                                         <h4 class="fw-bolder">Email</h4>
-                                        <p class="ms-5">info@company.org</p>
+                                        <p class="ms-5">
+                                            <a href="mailto:boedypratama51@gmail.com"
+                                                class="text-decoration-none text-dark">info@company.org</a>
+                                        </p>
                                     </div>
+
                                     <div class="col-md-4">
                                         <i class="fa fa-phone-alt fa-2x primary float-start me-3"></i>
                                         <h4 class="fw-bolder">Phone</h4>
                                         <p class="ms-5">
-                                            +62 123 553 123 555
+                                            <a href="tel:+6285722120447" class="text-decoration-none text-dark">+62 857
+                                                2212 0447</a>
                                         </p>
                                     </div>
+
                                 </div>
                             </div>
                         </div>
