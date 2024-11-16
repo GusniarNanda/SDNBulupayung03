@@ -15,10 +15,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        User:: create ([
-            'name' => 'Bioskopy',
-            'email' => 'bioskopy@gmail.com',
-            'password' => Hash::make('123')
-        ]);
+       $this->call([
+            UserSeeder::class,
+            AboutSeeder::class,
+            ContactSeeder::class,
+       ]);
     }
 }
