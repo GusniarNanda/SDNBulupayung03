@@ -68,31 +68,21 @@
     <!-- end daftar berita -->
 
     <!-- FOOTER -->
-    <footer class="footer-top bg-dark text-white p-5 mt-5">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-3">
-                    <h2 class="fw-bold">SDN 3 Bulupayung</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat consequuntur mamgnam commodi
-                        voluptatem quas? Itaque quo obcaecati harum ut maxime.</p>
-                </div>
-                <div class="col-md-3">
-                    <h5>Contact</h5>
-                    <p><i class="fas fa-envelope me-2"></i>mail@company.com</p>
-                    <p><i class="fas fa-phone me-2"></i>+6221 2002 2012</p>
-                </div>
-                <div class="col-md-3">
-                    <h5>Address</h5>
-                    <p><i class="fas fa-home me-2"></i>Jl. Jendral Sudirman Kav. 52, Jakarta Selatan</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @extends('layout.footer');
     <!-- END FOOTER -->
 
     <!-- Optional JavaScript -->
     <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/aos/aos-master/dist/aos.js"></script>
+    <script src="assets/vendor/aos/aos-master/dist/aos.js">
+        < script src = "/assets/vendor/jquery/jquery-3.7.1.js" >
+    </script>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/fontawesome/fontawesome-free-5.15.4-web/js/all.min.js"></script>
+    <script src="assets/vendor/masonry/masonry.pkgd.min.js"></script>
+    <script src="/assets/vendor/aos/aos-master/dist/aos.js"></script>
+    <script src="/assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    </script>
     <script>
         AOS.init({
             duration: 1200,

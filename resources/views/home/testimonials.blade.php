@@ -68,102 +68,21 @@
     <!-- end Sarana & Prasarana -->
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-top bg-dark text-white p-5">
-            <div class="footer mt-5 bg-dark text-white p-5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                            <h2 class="fw-bold">COMPANY</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Repellat consequuntur mamgnam commodi voluptatem quas? Itaque
-                                quo obcaecati perspiciatis quaerat ullam!
-                            </p>
-                            <strong>Phone</strong> : <span>+628819974611</span>
-                            <br />
-                            <strong>Email</strong> : <span>info@company.org</span>
-                        </div>
-                        <div class="col-md-2">
-                            <h2 class="fw-bold">Our Services</h2>
-                            <ul class="list-group list-unstyled">
-                                <li class="list-item">
-                                    <a href="" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Web Development
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Web Design
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Online Marketing
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Graphic Designer
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Photography
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-2">
-                            <h2 class="fw-bold">Useful Links</h2>
-                            <ul class="list-group list-unstyled">
-                                <li class="list-item">
-                                    <a href="/" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Home
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="/about" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        About Us
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="/facilities" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Sarana & Prasarana
-                                    </a>
-                                </li>
-                                <li class="list-item">
-                                    <a href="/contact" class="text-decoration-none text-white">
-                                        <i class="fa fa-chevron-right primary"></i>
-                                        Contact
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-md-3">
-                            <h2 class="fw-bold">Join Our Newsletter</h2>
-                            <form action="" class="mt-4">
-                                <input type="text" class="form-control" placeholder="Email" />
-                                <button class="btn btn-primary mt-4">Subscribe</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-    </footer>
+    @extends('layout.footer');
     <!-- END FOOTER -->
 
     <!-- Optional JavaScript -->
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js">
+        < script src = "/assets/vendor/jquery/jquery-3.7.1.js" >
+    </>
     <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/fontawesome/fontawesome-free-5.15.4-web/js/all.min.js"></script>
+    <script src="assets/vendor/masonry/masonry.pkgd.min.js"></script>
+    <script src="/assets/vendor/aos/aos-master/dist/aos.js"></script>
+    <script src="/assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+
+    </script>
     <!-- AOS -->
     <script src="/assets/vendor/aos/aos-master/dist/aos.js"></script>
     <script>

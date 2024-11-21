@@ -113,44 +113,22 @@
     <!-- end features -->
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-top bg-dark text-white p-5">
-            <div class="footer mt-5 bg-dark text-white p-5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                            <h2 class="fw-bold">COMPANY</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Repellat consequuntur mamgnam commodi volluptatem quas? Itaque
-                                quo obcaecati harum ut maxime.
-                            </p>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="mb-4">Contact</h5>
-                            <p><i class="fas fa-envelope me-3"></i> mail@company.com</p>
-                            <p><i class="fas fa-phone me-3"></i> +6221 2002 2012</p>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="mb-4">Address</h5>
-                            <p>
-                                <i class="fas fa-home me-3"></i> Jl. Jendral Sudirman Kav. 52,
-                                Jakarta Selatan
-                            </p>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @extends('layout.footer')
     <!-- END FOOTER -->
 
     <!-- Optional JavaScript -->
     <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS -->
-    <script src="assets/vendor/aos/aos-master/dist/aos.js"></script>
+    <script src="assets/vendor/aos/aos-master/dist/aos.js">
+        < script src = "/assets/vendor/jquery/jquery-3.7.1.js" >
+    </>
+    <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/fontawesome/fontawesome-free-5.15.4-web/js/all.min.js"></script>
+    <script src="assets/vendor/masonry/masonry.pkgd.min.js"></script>
+    <script src="/assets/vendor/aos/aos-master/dist/aos.js"></script>
+    <script src="/assets/vendor/isotope/isotope.pkgd.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    </script>
     <script>
         AOS.init({
             duration: 1200,

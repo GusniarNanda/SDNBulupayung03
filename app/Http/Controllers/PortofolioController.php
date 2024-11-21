@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kategori;
 use App\Models\Portofolio;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,7 @@ class PortofolioController extends Controller
      */
     public function index()
     {
-        $portofolios = Portofolio::all();
+        $portofolios = Portofolio::with ('kategori')->get();
     
         return view('portofolio.index',compact('portofolios'));
     }
@@ -26,7 +27,8 @@ class PortofolioController extends Controller
      */
     public function create()
     {
-        return view('portofolio.create');
+        $categories = Kategori::all();
+        return view('portofolio.create', compact('categories'));
     }
 
     /**
@@ -38,7 +40,7 @@ class PortofolioController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title'=> 'required','description' => 'required','image' => 'required|image', 'kategori' => 'required|string'
+            'title'=> 'required','description' => 'required','image' => 'required|image', 'category_id' => 'required|exists:categories,id'
         ]);
 
         $input = $request->all();
@@ -75,7 +77,8 @@ class PortofolioController extends Controller
      */
     public function edit(portofolio $portofolio)
     {
-        return view('portofolio.edit',compact('portofolio'));
+        $categories = Kategori::all();
+        return view('portofolio.edit',compact('portofolio','categories'));
     }
 
     /**
@@ -88,7 +91,7 @@ class PortofolioController extends Controller
     public function update(Request $request, portofolio $portofolio)
     {
         $request->validate([
-            'title'=> 'required','description' => 'required','image' => 'image','kategori' => 'required|string'
+            'title'=> 'required','description' => 'required','image' => 'image','category_id' => 'required|exists:categories,id'
         ]);
 
         $input = $request->all();

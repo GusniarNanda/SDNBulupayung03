@@ -69,7 +69,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                         </li>
 
 
-                        <li class="nav-item menu-open">
+                        <li class="nav-item">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
@@ -77,53 +77,68 @@ scratch. This page gets rid of all links and provides the needed markup only.
                                     <i class="right fas fa-angle-left"></i>
                                 </p>
                             </a>
-                            <ul class="nav nav-treeview">
+                            <ul class="nav nav-treeview" id="nav-datamaster">
                                 <li class="nav-item">
-                                    <a href="/admin/sliders" class="nav-link">
+                                    <a href="/admin/sliders" class="nav-link"
+                                        {{ request()->is('admin/sliders*') ? 'active' : '' }}>
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Highlight Sekolah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/visimisi" class="nav-link">
+                                    <a href="/admin/visimisi"
+                                        class="nav-link {{ request()->is('admin/visimisi*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Visi Misi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/services" class="nav-link">
+                                    <a href="/admin/services"
+                                        class="nav-link  {{ request()->is('admin/services*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data Prestasi</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/testimonial" class="nav-link">
+                                    <a href="/admin/testimonial"
+                                        class="nav-link  {{ request()->is('admin/testimonial*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Sarana & Prasarana</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/portofolio" class="nav-link">
+                                    <a href="/admin/portofolio"
+                                        class="nav-link {{ request()->is('admin/portofolio*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Galeri Sekolah</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/clients" class="nav-link">
+                                    <a href="/admin/clients"
+                                        class="nav-link  {{ request()->is('admin/clients*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data Client</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="/admin/teams" class="nav-link">
+                                    <a href="/admin/teams"
+                                        class="nav-link  {{ request()->is('admin/teams*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Data Guru</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="/admin/kategori"
+                                        class="nav-link  {{ request()->is('admin/kategori*') ? 'active' : '' }}">
+                                        <i class="far fa-circle nav-icon"></i>
+                                        <p>Kategori Gambar</p>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/berita" class="nav-link">
+                            <a href="/admin/berita"
+                                class="nav-link  {{ request()->is('admin/berita*') ? 'active' : '' }}">
                                 <i class="fa fa-solid fa-bullhorn"></i>
                                 <p>
                                     Berita
@@ -131,7 +146,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a href="/admin/contact" class="nav-link">
+                            <a href="/admin/contact"
+                                class="nav-link  {{ request()->is('admin/kontak*') ? 'active' : '' }}">
                                 <i class="nav-icon fas fa-phone"></i>
                                 <p>
                                     Kontak
@@ -222,11 +238,11 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- REQUIRED SCRIPTS -->
 
     <!-- jQuery -->
-    <script src="plugins/jquery/jquery.min.js"></script>
+    <script src="/lte/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
-    <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="/lte/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
-    <script src="dist/js/adminlte.min.js"></script>
+    <script src="/lte/dist/js/adminlte.min.js"></script>
     <script src="/assets/vendor/toasteditor/toastui-editor-all.min.js"></script>
     <script>
         function initEditor(selector, value, options = {}) {
@@ -244,6 +260,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 ],
                 ...options
             });
+        }
+
+        const navDataMasterEl = document.getElementById("nav-datamaster");
+        const activeDataMasterLinks = navDataMasterEl.querySelectorAll(".nav-item .nav-link.active")
+        if (activeDataMasterLinks.length > 0) {
+            navDataMasterEl.parentNode.classList.add("menu-open");
         }
     </script>
     @yield('scripts', '')

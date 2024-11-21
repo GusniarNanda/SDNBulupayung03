@@ -25,8 +25,12 @@
                         <small style="color: red">{{ $message }}</small>
                     @enderror
                     <div class="form-group">
-                        <label for="">Kategori</label>
-                        <input type="text" class="form-control" name="kategori" placeholder="kategori">
+                        <label for="kategori">Kategori</label>
+                        <select name="category_id" class="form-control" id="kategori">
+                            @foreach ($categories as $kategori)
+                                <option value="{{ $kategori->id }}">{{ $kategori->nama }}</option>
+                            @endforeach
+                        </select>
                     </div>
                     @Error('kategori')
                         <small style="color: red">{{ $message }}</small>

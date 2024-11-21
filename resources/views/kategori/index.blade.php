@@ -1,11 +1,11 @@
 @extends('layout.app')
-@section('title', 'Data Portofolio')
+@section('title', 'Data Kategori')
 
 
 @section('content')
 
     <div class="container">
-        <a href="/admin/portofolio/create" class="btn btn-primary mb-3">Tambah Data</a>
+        <a href="{{ route('admin.kategori.create') }}" class="btn btn-primary mb-3">Tambah Data</a>
 
 
         @if ($message = Session::get('message'))
@@ -16,38 +16,28 @@
         @endif
 
 
-
         <div class="table-responsive">
             <table class="table table-bordered table-hover table-striped">
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Judul</th>
-                        <th>Deskripsi</th>
-                        <th>Gambar</th>
-                        <th>Kategori</th>
+                        <th>Nama</th>
                         <th>Aksi</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     @php
-                        $i = 1;
+                        $i = 0;
                     @endphp
-                    @foreach ($portofolios as $portofolio)
+                    @foreach ($kategori as $kat)
                         <tr>
                             <td>{{ ++$i }}</td>
-                            <td>{{ $portofolio->title }}</td>
-                            <td>{{ $portofolio->description }}</td>
+                            <td>{{ $kat->nama }}</td>
                             <td>
-                                <img src="{{ Storage::url('images/' . $portofolio->image) }}" alt="" class="img-fluid"
-                                    width="90">
-                            </td>
-                            <td>{{ $portofolio->kategori->nama }}</td>
-                            <td>
-                                <a href="{{ route('admin.portofolio.edit', $portofolio->id) }}"
+                                <a href="{{ route('admin.kategori.edit', $kat->id) }}"
                                     class="btn btn-warning">Edit</a>
-                                <form action="{{ route('admin.portofolio.destroy', $portofolio->id) }}" method="POST">
+                                <form action="{{ route('admin.kategori.destroy', $kat->id) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
                                     <button type="submit" class="btn btn-danger">Hapus</button>

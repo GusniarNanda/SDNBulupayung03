@@ -7,6 +7,7 @@ use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\SliderController;
@@ -47,6 +48,7 @@ Route::as('admin.')->prefix('admin')->group(function () {
     Route::resource('portofolio',PortofolioController::class);
     Route::resource('clients',ClientController::class);
     Route::resource('teams',TeamController::class);
+    Route::resource('kategori',KategoriController::class);
 
     Route::get('contact', [ContactController::class, 'index']);
     Route::put('contact/{id}', [ContactController::class, 'update']); 
