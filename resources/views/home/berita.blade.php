@@ -54,7 +54,7 @@
                                 alt="{{ $berita->judul }}" style="max-height: 200px; object-fit: cover;">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title font-bold">{{ $berita->judul }}</h5>
-                                <p class="card-text">{{ Str::limit($berita->konten, 100) }}</p>
+                                <p class="card-text">{!! Str::limit($berita->konten, 100) !!}</p>
                                 <a class="btn btn-primary mt-auto" href="{{ route('berita', $berita->id) }}">
                                     Read more →
                                 </a>

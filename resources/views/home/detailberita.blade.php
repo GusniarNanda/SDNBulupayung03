@@ -51,7 +51,7 @@
             <!-- Content -->
             <div class="col-md-8 offset-md-2">
                 <article class="mb-5">
-                    <p class="text-dark" style="line-height: 1.8;">{{ $berita->konten }}</p>
+                    <p class="text-dark" style="line-height: 1.8;">{!! $berita->konten !!}</p>
                 </article>
 
                 <!-- Share buttons -->
