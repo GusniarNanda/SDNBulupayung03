@@ -24,28 +24,28 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php'); // Mendapatkan nama file
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a class="dropdown-item <?= $current_page == 'about' ? 'text-success' : '' ?>"
-                                href="about">Visi Misi</a></li>
+                                href="/about">Visi Misi</a></li>
                         <li><a class="dropdown-item <?= $current_page == 'team' ? 'text-success' : '' ?>"
-                                href="team">Guru</a></li>
+                                href="/team">Guru</a></li>
                         <li><a class="dropdown-item <?= $current_page == 'testimonial' ? 'text-success' : '' ?>"
-                                href="testimonial">Sarpras</a></li>
+                                href="/testimonial">Sarpras</a></li>
                     </ul>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bolder <?= $current_page == 'services' ? 'active text-success' : '' ?>"
-                        href="{{ url('services') }}">Prestasi</a>
+                        href="{{ url('/services') }}">Prestasi</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bolder <?= $current_page == 'portofolio' ? 'active text-success' : '' ?>"
-                        href="{{ url('portofolio') }}">Galeri</a>
+                        href="{{ url('/portofolio') }}">Galeri</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bolder <?= $current_page == 'berita' ? 'active text-success' : '' ?>"
-                        href="{{ url('berita') }}">Berita</a>
+                        href="{{ url('/berita') }}">Berita</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link fw-bolder <?= $current_page == 'contact' ? 'active text-success' : '' ?>"
-                        href="contact">Kontak</a>
+                        href="/contact">Kontak</a>
                 </li>
 
                 <?php if (!Auth::user()): ?>
@@ -53,7 +53,7 @@ $current_page = basename($_SERVER['PHP_SELF'], '.php'); // Mendapatkan nama file
 
                 <li class="nav-item">
                     <a class="nav-link fw-bolder <?= $current_page == 'login' ? 'active text-success' : '' ?>"
-                        href="login">Login</a>
+                        href="/login">Login</a>
                 </li>
                 <?php endif; ?>
             </ul>

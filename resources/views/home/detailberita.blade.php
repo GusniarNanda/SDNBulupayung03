@@ -42,6 +42,9 @@
         <div class="row">
             <!-- Image and Title -->
             <div class="col-12 text-center mb-4">
+                <a href="/berita" class="text-primary btn-link">
+                    <i class="fas fa-arrow-left"></i> Kembali
+                </a>
                 <h1 class="fw-bold mb-3">{{ $berita->judul }}</h1>
                 <img src="{{ Storage::url('images/' . $berita->gambar) }}" alt="{{ $berita->judul }}"
                     class="img-fluid rounded mb-4" style="max-height: 450px; object-fit: cover;">
@@ -70,42 +73,13 @@
     <!-- end features -->
 
     <!-- FOOTER -->
-    <footer>
-        <div class="footer-top bg-dark text-white p-5">
-            <div class="footer mt-5 bg-dark text-white p-5">
-                <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-md-1"></div>
-                        <div class="col-md-3">
-                            <h2 class="fw-bold">SDN 3 Bulupayung</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                Repellat consequuntur mamgnam commodi volluptatem quas? Itaque
-                                quo obcaecati harum ut maxime.
-                            </p>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="mb-4">Contact</h5>
-                            <p><i class="fas fa-envelope me-3"></i> mail@company.com</p>
-                            <p><i class="fas fa-phone me-3"></i> +6221 2002 2012</p>
-                        </div>
-                        <div class="col-md-3">
-                            <h5 class="mb-4">Address</h5>
-                            <p>
-                                <i class="fas fa-home me-3"></i> Jl. Jendral Sudirman Kav. 52,
-                                Jakarta Selatan
-                            </p>
-                        </div>
-                        <div class="col-md-2"></div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    @extends('layout.footer');
     <!-- END FOOTER -->
 
     <!-- Optional JavaScript -->
     <script src="/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/vendor/fontawesome/fontawesome-free-5.15.4-web/js/all.min.js"></script>
+
     <!-- AOS -->
     <script src="assets/vendor/aos/aos-master/dist/aos.js"></script>
     <script>

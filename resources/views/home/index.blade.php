@@ -63,12 +63,13 @@
     <!-- END CAROUSEL -->
 
     <!-- ABOUT US -->
-    <div class="about-use mt-5">
+    <div class="about-us mt-5">
         <div class="container">
             <div class="title-container">
                 <h2 class="text-center fw-bold">Sekolah Kami</h2>
             </div>
             <div class="row mt-5">
+                {{-- VISI --}}
                 <div class="col-md-6" data-aos="fade-right">
                     <h3 class="fw-bold about-us-title">
                         SDN 3 BULUPAYUNG
@@ -78,42 +79,14 @@
                         Pancasila
                     </p>
                 </div>
+                {{-- MISI --}}
                 <div class="col-md-6" data-aos="fade-left">
-                    <p>
-                        SDN 3 Bulupayung berkomitmen untuk membentuk siswa yang berkarakter, cerdas, dan siap menghadapi
-                        tantangan masa depan.
-                        Melalui pendekatan pendidikan yang holistik, kami berusaha mengembangkan potensi siswa secara
-                        akademik, emosional, dan sosial.
-                        Untuk mencapai tujuan tersebut, kami menjalankan misi sebagai berikut:
-                    </p>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item">
-                            <i class="fa fa-check-double primary"></i>
-                            1. Mendidik siswa agar beriman dan bertakwa kepada Tuhan Yang Maha Esa.
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-check-double primary"></i>
-                            2. Menciptakan lingkungan belajar yang kondusif dan menyenangkan.
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-check-double primary"></i>
-                            3. Menumbuhkan rasa cinta nasionalisme yang kuat.
-                        </li>
-                        <li class="list-group-item">
-                            <i class="fa fa-check-double primary"></i>
-                            4. Mengembangkan potensi siswa dalam berbagai bidang, baik akademik maupun non-akademik,
-                            agar mampu bersaing di era globalisasi.
-
-
-                        </li>
-                    </ul>
-                    <p class="mt-2">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum at
-                        omnis animi ad ab, dolor aliquam. Corrupti accusantium id quo sed,
-                        facilis quisquam possimus consectetur amet unde laudantium eaque
-                        iusto?
-                    </p>
+                    <h3 class="fw-bold about-us-title">VISI</h3>
+                    <div>{!! $visimisi->visi !!}</div>
+                    <h3 class="fw-bold about-us-title">MISI</h3>
+                    <div>{!! $visimisi->misi !!}</div>
                 </div>
+                
             </div>
         </div>
     </div>
@@ -160,56 +133,25 @@
                 <div class="col-md-12 d-flex justify-content-center">
                     <ul class="list-unstyled d-flex portofolio-filters">
                         <li data-filter="*" class="py-2 px-4 filter-active text-white">ALL</li>
-                        <li data-filter=".filter-web" class="py-2 px-4">Web</li>
-                        <li data-filter=".filter-design" class="py-2 px-4">Design</li>
-                        <li data-filter=".filter-photo" class="py-2 px-4">Photography</li>
+                        @foreach ($portofolios->pluck('kategori') as $kategori)
+                            <li data-filter=".filter-{{ Str::slug($kategori->id) }}" class="py-2 px-4">
+                                {{ $kategori->nama }}</li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
             <div class="row mt-5">
                 <div class="col-md-12">
                     <div class="masonry portofolio-container" data-aos="zoom-in-up">
-                        <div class="masonry-sizer">
-                            <div class="masonry-item m-2 portofolio-item filter-web">
-                                <img src="/assets/img/p1.jpg" alt="" class="img-fluid" />
+                        <div class="masonry-sizer"></div>
+                        @foreach ($portofolios as $portofolio)
+                            <div class="masonry-item m-2 portofolio-item filter-{{ Str::slug($portofolio->kategori->id) }}">
+                                <img src="{{ Storage::url('images/' . $portofolio->image) }}" alt=""
+                                    class="img-fluid" />
+
                             </div>
-                            <div class="masonry-item m-2 portofolio-item filter-design">
-                                <img src="/assets/img/p2.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-design">
-                                <img src="/assets/img/p3.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-web">
-                                <img src="/assets/img/p4.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-design">
-                                <img src="/assets/img/p5.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-photo">
-                                <img src="/assets/img/p6.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-web">
-                                <img src="/assets/img/p7.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-web">
-                                <img src="/assets/img/p8.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-photo">
-                                <img src="/assets/img/p9.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-web">
-                                <img src="/assets/img/p10.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-design">
-                                <img src="/assets/img/p11.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-design">
-                                <img src="/assets/img/p12.jpg" alt="" class="img-fluid" />
-                            </div>
-                            <div class="masonry-item m-2 portofolio-item filter-design">
-                                <img src="/assets/img/p13.jpg" alt="" class="img-fluid" />
-                            </div>
-                        </div> <!-- Perbaikan pada tag ini -->
+                        @endforeach
+
 
                     </div>
                 </div>

@@ -15,7 +15,7 @@
                     </div>
                 @endif
 
-                <form action="/admin/contact/{{$contact->id }}" method="POST" enctype="multipart/form-data">
+                <form action="/admin/contact/{{ $contact->id }}" method="POST" enctype="multipart/form-data">
                     @method('PUT')
                     @csrf
                     <div class="form-group">
@@ -28,9 +28,7 @@
                     @enderror
                     <div class="form-group">
                         <label for="">Deskripsi</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Deskripsi">
-                            {{ $contact->description }}
-                        </textarea>
+                        <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Deskripsi">{{ $contact->description }}</textarea>
                     </div>
                     @Error('description')
                         <small style="color: red">{{ $message }}</small>
@@ -61,9 +59,7 @@
                     @enderror
                     <div class="form-group">
                         <label for="">Maps Embed</label>
-                        <textarea name="maps_embed" id="" cols="30" rows="10" class="form-control" placeholder="Maps Embed">
-                            {{ $contact->maps_embed }}
-                        </textarea>
+                        <textarea name="maps_embed" id="" cols="30" rows="10" class="form-control" placeholder="Maps Embed">{{ $contact->maps_embed }}</textarea>
                     </div>
                     @Error('maps_embed')
                         <small style="color: red">{{ $message }}</small>

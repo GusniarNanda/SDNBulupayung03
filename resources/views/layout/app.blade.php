@@ -8,7 +8,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title> </title>
+    <title>@yield('title')</title>
 
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
@@ -38,7 +38,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="index3.html" class="brand-link">
+            <a href="/admin/dashboard" class="brand-link">
                 <img src="/lte/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
                     style="opacity: .8">
                 <span class="brand-text font-weight-light">SDN</span>
@@ -79,8 +79,8 @@ scratch. This page gets rid of all links and provides the needed markup only.
                             </a>
                             <ul class="nav nav-treeview" id="nav-datamaster">
                                 <li class="nav-item">
-                                    <a href="/admin/sliders" class="nav-link"
-                                        {{ request()->is('admin/sliders*') ? 'active' : '' }}>
+                                    <a href="/admin/sliders"
+                                        class="nav-link {{ request()->is('admin/sliders*') ? 'active' : '' }}">
                                         <i class="far fa-circle nav-icon"></i>
                                         <p>Highlight Sekolah</p>
                                     </a>

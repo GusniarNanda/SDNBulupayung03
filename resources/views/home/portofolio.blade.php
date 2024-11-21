@@ -53,8 +53,8 @@
                         <ul class="list-unstyled d-flex portofolio-filters">
                             <li data-filter="*" class="py-2 px-4 filter-active text-white">ALL</li>
                             @foreach ($portofolios->pluck('kategori') as $kategori)
-                                <li data-filter=".filter-{{ Str::slug($kategori) }}" class="py-2 px-4">
-                                    {{ $kategori }}</li>
+                                <li data-filter=".filter-{{ Str::slug($kategori->id) }}" class="py-2 px-4">
+                                    {{ $kategori->nama }}</li>
                             @endforeach
                         </ul>
                     </div>
@@ -67,7 +67,8 @@
                     <div class="masonry portofolio-container" data-aos="zoom-in-up">
                         <div class="masonry-sizer"></div>
                         @foreach ($portofolios as $portofolio)
-                            <div class="masonry-item m-2 portofolio-item filter-{{ Str::slug($portofolio->kategori) }}">
+                            <div
+                                class="masonry-item m-2 portofolio-item filter-{{ Str::slug($portofolio->kategori->id) }}">
                                 <img src="{{ Storage::url('images/' . $portofolio->image) }}" alt=""
                                     class="img-fluid" />
 

@@ -10,6 +10,7 @@ use App\Models\Testimonial;
 use App\Models\Services;
 use App\Models\Berita;
 use App\Models\Portofolio;
+use App\Models\VisiMisi;
 use Symfony\Component\HttpKernel\Profiler\Profile;
 
 class HomeController extends Controller
@@ -19,12 +20,15 @@ class HomeController extends Controller
     {
         $sliders = Slider::all();
         $services = Service::all();
-        return view('home.index', compact('sliders' , 'services'));
+        $portofolios = Portofolio::all();
+        $visimisi = VisiMisi::first();
+        return view('home.index', compact('sliders' , 'services', 'portofolios', 'visimisi'));
     }
     
     public function about()
     {
-        return view('home.about');
+        $visimisi = VisiMisi::first();
+        return view('home.about', compact('visimisi'));
     }
 
     public function team()

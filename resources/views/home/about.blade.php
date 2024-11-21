@@ -40,50 +40,24 @@
 
     <!-- about -->
     <div class="row mt-5">
+        {{-- VISI --}}
         <div class="col-md-6" data-aos="fade-right">
             <h3 class="fw-bold about-us-title">
-                VISI
+                SDN 3 BULUPAYUNG
             </h3>
             <p class="fw-bolder mt-4 about-us-subtitle">
-                Terwujudnya siswa berbudi pekerti luhur, cerdas, berbudaya, terampil berkarya, dan berkarakter Pancasila
+                Terwujudnya siswa berbudi pekerti luhur, cerdas, berbudaya, terampil berkarya, dan berkarakter
+                Pancasila
             </p>
         </div>
+        {{-- MISI --}}
         <div class="col-md-6" data-aos="fade-left">
-            <h3 class="fw-bold about-us-title">
-                MISI
-            </h3>
-            <p>
-                SDN 3 Bulupayung berkomitmen untuk membentuk siswa yang berkarakter, cerdas, dan siap menghadapi
-                tantangan masa depan. Melalui pendekatan pendidikan yang holistik, kami berusaha mengembangkan potensi
-                siswa secara akademik, emosional, dan sosial. Untuk mencapai tujuan tersebut, kami menjalankan misi
-                sebagai berikut:
-            </p>
-            <ul class="list-group list-group-flush">
-                <li class="list-group-item">
-                    <i class="fa fa-check-double primary"></i>
-                    1. Mendidik siswa agar beriman dan bertakwa kepada Tuhan Yang Maha Esa.
-                </li>
-                <li class="list-group-item">
-                    <i class="fa fa-check-double primary"></i>
-                    2. Menciptakan lingkungan belajar yang kondusif dan menyenangkan.
-                </li>
-                <li class="list-group-item">
-                    <i class="fa fa-check-double primary"></i>
-                    3. Menumbuhkan rasa cinta nasionalisme yang kuat.
-                </li>
-                <li class="list-group-item">
-                    <i class="fa fa-check-double primary"></i>
-                    4. Mengembangkan potensi siswa dalam berbagai bidang, baik akademik maupun non-akademik,
-                    agar mampu bersaing di era globalisasi.
-                </li>
-            </ul>
-            <p class="mt-2">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum at
-                omnis animi ad ab, dolor aliquam. Corrupti accusantium id quo sed,
-                facilis quisquam possimus consectetur amet unde laudantium eaque
-                iusto?
-            </p>
+            <h3 class="fw-bold about-us-title">VISI</h3>
+            <div>{!! $visimisi->visi !!}</div>
+            <h3 class="fw-bold about-us-title">MISI</h3>
+            <div>{!! $visimisi->misi !!}</div>
         </div>
+        
     </div>
     <!-- end about -->
 
