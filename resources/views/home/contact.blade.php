@@ -53,32 +53,45 @@
                         <div class="card-body">
                             <div class="container">
                                 <div class="row">
+                                    <!-- Location -->
                                     <div class="col-md-4">
-                                        <i class="fa fa-map-marker-alt fa-2x primary float-start me-4"></i>
-                                        <h4 class="fw-bolder">Location</h4>
-                                        <p class="ms-5">
-                                            JL. Tambangan, Rt. 2 Rw. 7, Pasanggiri Bulupayung Kesugihan, Kali Cibito,
-                                            Bulupayung, Kec. Kesugihan, Kabupaten Cilacap, Jawa Tengah 53272
-                                        </p>
+                                        <div class="card h-100 border-0 clickable">
+                                            <div class="card-body">
+                                                <i class="fa fa-map-marker-alt fa-2x primary float-start me-4"></i>
+                                                <h4 class="fw-bolder">Location</h4>
+                                                <p class="ms-5">
+                                                    JL. Tambangan, Rt. 2 Rw. 7, Pasanggiri Bulupayung Kesugihan, Kali
+                                                    Cibito, Bulupayung, Kec. Kesugihan, Kabupaten Cilacap, Jawa Tengah
+                                                    53272
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
+                                    <!-- Email -->
                                     <div class="col-md-4">
-                                        <i class="fa fa-envelope fa-2x primary float-start me-3"></i>
-                                        <h4 class="fw-bolder">Email</h4>
-                                        <p class="ms-5">
-                                            <a href="mailto:boedypratama51@gmail.com"
-                                                class="text-decoration-none text-dark">info@company.org</a>
-                                        </p>
+                                        <a href="mailto:info@company.org" class="text-decoration-none">
+                                            <div class="card h-100 border-0 clickable">
+                                                <div class="card-body">
+                                                    <i class="fa fa-envelope fa-2x primary float-start me-3"></i>
+                                                    <h4 class="fw-bolder">Email</h4>
+                                                    <p class="ms-5">info@company.org</p>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
 
+                                    <!-- Phone -->
                                     <div class="col-md-4">
-                                        <i class="fa fa-phone-alt fa-2x primary float-start me-3"></i>
-                                        <h4 class="fw-bolder">Phone</h4>
-                                        <p class="ms-5">
-                                            <a href="tel:+6285722120447" class="text-decoration-none text-dark">+62 857
-                                                2212 0447</a>
-                                        </p>
+                                        <a href="tel:+6285722120447" class="text-decoration-none">
+                                            <div class="card h-100 border-0 clickable">
+                                                <div class="card-body">
+                                                    <i class="fa fa-phone-alt fa-2x primary float-start me-3"></i>
+                                                    <h4 class="fw-bolder">Phone</h4>
+                                                    <p class="ms-5">+62 857 2212 0447</p>
+                                                </div>
+                                            </div>
+                                        </a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
