@@ -75,11 +75,26 @@ a {
 }
 
 .btn-to-top {
-  display: inline;
-  position: fixed;
-  right: 15px;
-  bottom: 15px;
+  position: fixed; /* Tetap di posisi tertentu */
+  bottom: 20px; /* Jarak dari bawah layar */
+  right: 20px; /* Jarak dari kanan layar */
+  width: 50px; /* Lebar tombol */
+  height: 50px; /* Tinggi tombol sama untuk membuatnya bulat */
+  border-radius: 50%; /* Membuat sudut membulat menjadi lingkaran */
+  background-color: #07bf07ff; /* Warna latar belakang */
+  color: #fff; /* Warna ikon */
+  display: flex; /* Untuk memusatkan ikon di tengah */
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+  transition: background-color 0.3s ease; /* Animasi hover */
+  z-index: 1000; /* Pastikan selalu di atas elemen lain */
 }
+
+.btn-to-top:hover {
+  background-color: #07bf07; /* Warna lebih gelap saat hover */
+}
+
 
 .bg-darker {
   background: #111;
