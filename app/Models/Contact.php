@@ -11,11 +11,11 @@ class Contact extends Model
 
     protected $table = 'contact';
     protected $fillable = [
-        'name','description',
-        'logo',
         'alamat',
         'email',
         'telepon',
         'maps_embed',
+        'link_email',
+        'link_telepon',
     ];
 }

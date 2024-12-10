@@ -1,7 +1,6 @@
 @extends('layout.app')
 @section('title', 'Data Kontak')
 
-
 @section('content')
 
     <div class="container">
@@ -10,68 +9,62 @@
 
                 @if ($message = Session::get('message'))
                     <div class="alert alert-success">
-                        <strong>Berhasil </strong>
+                        <strong>Berhasil</strong>
                         <p>{{ $message }}</p>
                     </div>
                 @endif
 
-                <form action="/admin/contact/{{ $contact->id }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('admin.contact.update', $contact->id) }}" method="POST">
                     @method('PUT')
                     @csrf
                     <div class="form-group">
-                        <label for="">Nama Perusahaan</label>
-                        <input type="text" class="form-control" name="name" placeholder="Judul"
-                            value="{{ $contact->name }}">
-                    </div>
-                    @Error('name')
-                        <small style="color: red">{{ $message }}</small>
-                    @enderror
-                    <div class="form-group">
-                        <label for="">Deskripsi</label>
-                        <textarea name="description" id="" cols="30" rows="10" class="form-control" placeholder="Deskripsi">{{ $contact->description }}</textarea>
-                    </div>
-                    @Error('description')
-                        <small style="color: red">{{ $message }}</small>
-                    @enderror
-                    <div class="form-group">
-                        <label for="">Alamat</label>
+                        <label for="alamat">Alamat</label>
                         <input type="text" class="form-control" name="alamat" placeholder="Alamat"
                             value="{{ $contact->alamat }}">
+                        @error('alamat')
+                            <small style="color: red">{{ $message }}</small>
+                        @enderror
                     </div>
-                    @Error('alamat')
-                        <small style="color: red">{{ $message }}</small>
-                    @enderror
                     <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="text" class="form-control" name="email" placeholder="Email"
+                        <label for="email">Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Email"
                             value="{{ $contact->email }}">
+                        @error('email')
+                            <small style="color: red">{{ $message }}</small>
+                        @enderror
                     </div>
-                    @Error('email')
-                        <small style="color: red">{{ $message }}</small>
-                    @enderror
                     <div class="form-group">
-                        <label for="">Telepon</label>
+                        <label for="telepon">Telepon</label>
                         <input type="text" class="form-control" name="telepon" placeholder="Telepon"
                             value="{{ $contact->telepon }}">
+                        @error('telepon')
+                            <small style="color: red">{{ $message }}</small>
+                        @enderror
                     </div>
-                    @Error('telepon')
-                        <small style="color: red">{{ $message }}</small>
-                    @enderror
                     <div class="form-group">
-                        <label for="">Maps Embed</label>
-                        <textarea name="maps_embed" id="" cols="30" rows="10" class="form-control" placeholder="Maps Embed">{{ $contact->maps_embed }}</textarea>
+                        <label for="maps_embed">Maps Embed</label>
+                        <textarea name="maps_embed" cols="30" rows="10" class="form-control" placeholder="Maps Embed">{{ $contact->maps_embed }}</textarea>
+                        @error('maps_embed')
+                            <small style="color: red">{{ $message }}</small>
+                        @enderror
                     </div>
-                    @Error('maps_embed')
-                        <small style="color: red">{{ $message }}</small>
-                    @enderror
-                    <img src="/image/{{ $contact->logo }}" alt="" class="img-fluid">
                     <div class="form-group">
-                        <label for="">Gambar</label>
-                        <input type="file" class="form-control" name="logo">
+                        <label for="link_telepon">Link WhatsApp</label>
+                        <input type="url" class="form-control" name="link_telepon" placeholder="https://wa.me/123456789"
+                            value="{{ $contact->link_telepon }}">
+                        @error('link_telepon')
+                            <small style="color: red">{{ $message }}</small>
+                        @enderror
                     </div>
-                    @Error('image')
-                        <small style="color: red">{{ $message }}</small>
-                    @enderror
+                    <div class="form-group">
+                        <label for="link_email">Link Email</label>
+                        <input type="url" class="form-control" name="link_email" placeholder="mailto:example@domain.com"
+                            value="{{ $contact->link_email }}">
+                        @error('link_email')
+                            <small style="color: red">{{ $message }}</small>
+                        @enderror
+                    </div>
+
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-block">Submit</button>
                     </div>
@@ -79,4 +72,5 @@
             </div>
         </div>
     </div>
+
 @endsection

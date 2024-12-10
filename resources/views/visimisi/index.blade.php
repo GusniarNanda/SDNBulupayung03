@@ -29,12 +29,19 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>{!! $visimisi->visi !!}</td>
-                            <td>{!! $visimisi->misi !!}</td>
-                        </tr>
+                        @if ($visimisi)
+                            <tr>
+                                <td>{!! $visimisi->visi !!}</td>
+                                <td>{!! $visimisi->misi !!}</td>
+                            </tr>
+                        @else
+                            <tr>
+                                <td colspan="2">Data visi dan misi belum tersedia.</td>
+                            </tr>
+                        @endif
                     </tbody>
                 </table>
+                
             </div>
         </div>
     </div>

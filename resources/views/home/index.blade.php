@@ -86,7 +86,6 @@
                     <h3 class="fw-bold about-us-title">MISI</h3>
                     <div>{!! $visimisi->misi !!}</div>
                 </div>
-                
             </div>
         </div>
     </div>
@@ -145,7 +144,8 @@
                     <div class="masonry portofolio-container" data-aos="zoom-in-up">
                         <div class="masonry-sizer"></div>
                         @foreach ($portofolios as $portofolio)
-                            <div class="masonry-item m-2 portofolio-item filter-{{ Str::slug($portofolio->kategori->id) }}">
+                            <div
+                                class="masonry-item m-2 portofolio-item filter-{{ Str::slug($portofolio->kategori->id) }}">
                                 <img src="{{ Storage::url('images/' . $portofolio->image) }}" alt=""
                                     class="img-fluid" />
 

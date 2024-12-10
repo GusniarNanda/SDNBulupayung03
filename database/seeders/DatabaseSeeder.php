@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
+use App\Models\VisiMisi;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             AboutSeeder::class,
             ContactSeeder::class,
+            VisiMisiSeeder::class,
        ]);
     }
 }

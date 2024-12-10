@@ -9,6 +9,7 @@ use App\Models\Slider;
 use App\Models\Testimonial;
 use App\Models\Services;
 use App\Models\Berita;
+use App\Models\Contact;
 use App\Models\Portofolio;
 use App\Models\VisiMisi;
 use Symfony\Component\HttpKernel\Profiler\Profile;
@@ -45,7 +46,8 @@ class HomeController extends Controller
 
     public function contact()
     {
-        return view('home.contact');
+        $contact = Contact::first();
+        return view('home.contact', compact('contact'));
     }
 
     public function testimonial()

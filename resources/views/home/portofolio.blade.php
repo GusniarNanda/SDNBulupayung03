@@ -60,8 +60,6 @@
                     </div>
                 </div>
             </div>
-
-
             <div class="row mt-5">
                 <div class="col-md-12">
                     <div class="masonry portofolio-container" data-aos="zoom-in-up">
@@ -71,11 +69,8 @@
                                 class="masonry-item m-2 portofolio-item filter-{{ Str::slug($portofolio->kategori->id) }}">
                                 <img src="{{ Storage::url('images/' . $portofolio->image) }}" alt=""
                                     class="img-fluid" />
-
                             </div>
                         @endforeach
-
-
                     </div>
                 </div>
             </div>

@@ -33,6 +33,7 @@ Route::get('/berita', [HomeController::class, 'berita']);
 Route::get('/berita/{id}', [HomeController::class, 'detailberita'])->name('berita');
 
 
+
 //Auth
 Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/login', [AuthController::class, 'authenticate']);
@@ -50,8 +51,8 @@ Route::as('admin.')->prefix('admin')->group(function () {
     Route::resource('teams',TeamController::class);
     Route::resource('kategori',KategoriController::class);
 
-    Route::get('contact', [ContactController::class, 'index']);
-    Route::put('contact/{id}', [ContactController::class, 'update']); 
+    Route::get('/contact', [ContactController::class, 'index']);
+    Route::put('/contact/update/{id}', [ContactController::class, 'update'])->name('contact.update'); 
 
     Route::resource('berita', BeritaController::class)->names([
     ]);

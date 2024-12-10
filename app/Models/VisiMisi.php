@@ -9,7 +9,7 @@ class VisiMisi extends Model
 {
     use HasFactory;
     protected $table = 'visimisi';
-    public $timestamps = false;
+    // public $timestamps = false;
     protected $fillable = [
         'visi','misi'
     ];
