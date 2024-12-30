@@ -15,7 +15,7 @@
     <!-- custom css -->
     <link rel="stylesheet" href="/assets/css/style.css" />
 
-    <title>Contact - Company</title>
+    <title>Kontak - Company</title>
 </head>
 
 <body>
@@ -28,10 +28,10 @@
     <div class="breadcumbs py-2">
         <div class="container">
             <div class="d-flex justify-content-between align-items-center text-white">
-                <h2>Contact</h2>
+                <h2>Kontak</h2>
                 <ol class="d-flex list-unstyled">
                     <li>Home</li>
-                    <li>Contact</li>
+                    <li>Kontak</li>
                 </ol>
             </div>
         </div>
@@ -42,10 +42,13 @@
     <div class="contact mb-5">
         <!-- Google Maps -->
         <div class="maps">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.3703164680437!2d109.12810761941205!3d-7.593686882381877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6569730293375b%3A0x2d0040044fbb1de1!2sSD%20Negeri%20Bulupayung%2003!5e1!3m2!1sid!2sid!4v1733128792409!5m2!1sid!2sid" width="2000" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3664.3703164680437!2d109.12810761941205!3d-7.593686882381877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6569730293375b%3A0x2d0040044fbb1de1!2sSD%20Negeri%20Bulupayung%2003!5e1!3m2!1sid!2sid!4v1733128792409!5m2!1sid!2sid"
+                width="2000" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="container mt-5">
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- Location -->
                 <div class="col-md-4 mb-4">
                     <div class="card border shadow-sm">
@@ -70,20 +73,9 @@
                         </div>
                     </a>
                 </div>
-                <!-- Phone -->
-                <div class="col-md-4 mb-4">
-                    <a href="tel:{{ $contact->telepon ?? '#' }}" class="text-decoration-none">
-                        <div class="card border shadow-sm">
-                            <div class="card-body text-center">
-                                <i class="fa fa-phone-alt fa-2x text-success mb-3"></i>
-                                <h5 class="card-title fw-bold">Telepon</h5>
-                                <p class="card-text">{{ $contact->telepon ?? 'Telepon tidak tersedia' }}</p>
-                            </div>
-                        </div>
-                    </a>
-                </div>
             </div>
         </div>
+
     </div>
     <!-- end contact -->
 

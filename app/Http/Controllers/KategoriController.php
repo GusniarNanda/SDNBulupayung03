@@ -21,7 +21,7 @@ class KategoriController extends Controller
     public function store()
     {
         $data = request()->validate([ 
-            'nama' =>'required|min:3|max:50'
+            'nama' =>'required|min:3|max:50|unique:categories,nama'
         ]);
 
         Kategori::create($data);

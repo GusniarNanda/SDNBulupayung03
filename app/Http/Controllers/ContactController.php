@@ -95,11 +95,10 @@ class ContactController extends Controller
                     }
                 }
             }],
-            'link_telepon' => 'nullable|string|max:255', // validasi link telepon jika diisi
         ]);
     
         // Ambil data yang sudah divalidasi
-        $data = $request->only(['alamat', 'telepon','email', 'maps_embed', 'link_email', 'link_telepon']);
+        $data = $request->only(['alamat', 'telepon','email', 'maps_embed', 'link_email']);
     
         // Update data contact di database
         $contact->update($data);

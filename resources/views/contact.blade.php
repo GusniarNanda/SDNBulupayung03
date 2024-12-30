@@ -33,6 +33,7 @@
                             <small style="color: red">{{ $message }}</small>
                         @enderror
                     </div>
+                    
                     <div class="form-group">
                         <label for="telepon">Telepon</label>
                         <input type="text" class="form-control" name="telepon" placeholder="Telepon"
@@ -41,18 +42,11 @@
                             <small style="color: red">{{ $message }}</small>
                         @enderror
                     </div>
+
                     <div class="form-group">
                         <label for="maps_embed">Maps Embed</label>
                         <textarea name="maps_embed" cols="30" rows="10" class="form-control" placeholder="Maps Embed">{{ $contact->maps_embed }}</textarea>
                         @error('maps_embed')
-                            <small style="color: red">{{ $message }}</small>
-                        @enderror
-                    </div>
-                    <div class="form-group">
-                        <label for="link_telepon">Link WhatsApp</label>
-                        <input type="url" class="form-control" name="link_telepon" placeholder="https://wa.me/123456789"
-                            value="{{ $contact->link_telepon }}">
-                        @error('link_telepon')
                             <small style="color: red">{{ $message }}</small>
                         @enderror
                     </div>
